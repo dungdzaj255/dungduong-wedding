@@ -1,0 +1,187 @@
+import React, { useState, useEffect, useRef } from 'react';
+import FullPageViewer from './components/FullPageViewer';
+import MusicPlayer from './components/MusicPlayer';
+import { Smartphone, Monitor, Maximize2, Send, ChevronUp, Share2, Heart } from 'lucide-react';
+
+export default function App() {
+  const rootRef = useRef(null);
+  const [isPaused, setIsPaused] = React.useState(false);
+
+  // Auto‑scroll slowly and continuously to the bottom, then loop back to top
+  React.useEffect(() => {
+    const stepPx = 1; // pixels per tick
+    const intervalMs = 30; // ~30 fps
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    let currentPos = window.scrollY;
+    const timer = setInterval(() => {
+      if (isPaused) return;
+      currentPos += stepPx;
+      if (currentPos > maxScroll) {
+        currentPos = 0;
+      }
+      window.scrollTo({ top: currentPos, behavior: 'auto' });
+    }, intervalMs);
+    return () => clearInterval(timer);
+  }, [isPaused]);
+
+  // Pause auto‑scroll on user interaction (scroll, touch, wheel, key)
+  React.useEffect(() => {
+    const pause = () => setIsPaused(true);
+    window.addEventListener('wheel', pause, { passive: true });
+    window.addEventListener('touchstart', pause, { passive: true });
+    window.addEventListener('keydown', pause);
+    return () => {
+      window.removeEventListener('wheel', pause);
+      window.removeEventListener('touchstart', pause);
+      window.removeEventListener('keydown', pause);
+    };
+  }, []);
+
+  // Resume auto‑scroll when tapping on the background (root container)
+  const handleRootClick = (e) => {
+    if (e.target === rootRef.current) {
+      setIsPaused(false);
+    }
+  };
+
+
+  const [viewMode, setViewMode] = useState('responsive'); // 'responsive' | 'mobile' | 'full'
+  const [copied, setCopied] = useState(false);
+
+  const scrollToRsvp = () => {
+    const el = document.getElementById('rsvp-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Thiệp cưới Đoàn Dũng & Thùy Dương',
+          text: 'Trân trọng kính mời bạn đến chung vui cùng Đoàn Dũng & Thùy Dương!',
+          url: window.location.href
+        });
+        return;
+      } catch (err) {
+        // Fallback to clipboard
+      }
+    }
+    navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div
+      style={{
+        minHeight: '100vh',
+        backgroundColor: '#1f1e1d',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        position: 'relative'
+      }}
+    >
+      {/* Background Audio Player */}
+      <MusicPlayer src="/music.mp3" title="Beautiful Girl" />
+
+
+
+
+      {/* Main Full Page Viewer */}
+      <main style={{ width: '100%', position: 'relative' }}>
+        <FullPageViewer viewMode={viewMode} />
+      </main>
+
+      {/* Floating Action Buttons */}
+      <div
+        style={{
+          position: 'fixed',
+          bottom: '80px',
+          right: '20px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '10px',
+          zIndex: 9998
+        }}
+      >
+        {/* Share Button */}
+        <button
+          onClick={handleShare}
+          aria-label="Chia sẻ"
+          title={copied ? 'Đã sao chép liên kết!' : 'Chia sẻ thiệp cưới'}
+          style={{
+            width: '44px',
+            height: '44px',
+            borderRadius: '50%',
+            backgroundColor: '#ffffff',
+            color: '#5D041E',
+            border: '1px solid #eae5df',
+            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer'
+          }}
+        >
+          <Share2 size={18} />
+        </button>
+
+        {/* Scroll To Top Button */}
+        <button
+          onClick={scrollToTop}
+          aria-label="Lên đầu trang"
+          title="Cuộn lên đầu trang"
+          style={{
+            width: '44px',
+            height: '44px',
+            borderRadius: '50%',
+            backgroundColor: '#ffffff',
+            color: '#5D041E',
+            border: '1px solid #eae5df',
+            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer'
+          }}
+        >
+          <ChevronUp size={22} />
+        </button>
+      </div>
+
+      {/* Share Toast Notification */}
+      {copied && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: '30px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            backgroundColor: '#5D041E',
+            color: '#ffffff',
+            padding: '8px 18px',
+            borderRadius: '20px',
+            fontSize: '13px',
+            fontWeight: 600,
+            boxShadow: '0 6px 20px rgba(0,0,0,0.3)',
+            zIndex: 100000,
+            animation: 'fadeIn 0.2s ease'
+          }}
+        >
+          Đã sao chép liên kết thiệp cưới!
+        </div>
+      )
+      }
+    </div >
+
+
+  );
+} 
