@@ -12,7 +12,6 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
   const [scale, setScale] = useState(1);
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  // Collect all gallery photos for lightbox
   const galleryPhotoIds = [
     'XLbd5vWc6e',
     '03mmnniHWa',
@@ -27,11 +26,12 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
     .filter(Boolean)
     .map(el => el.props.localImageUrl);
 
-  // Resize listener to scale 500px canvas to screen width
   useEffect(() => {
     const handleResize = () => {
       if (!containerRef.current) return;
+
       let targetWidth = window.innerWidth;
+
       if (viewMode === 'mobile') {
         targetWidth = Math.min(390, window.innerWidth);
       } else if (viewMode === 'full') {
@@ -39,18 +39,21 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       } else {
         targetWidth = Math.min(500, window.innerWidth);
       }
-      const newScale = targetWidth / 500;
-      setScale(newScale);
+
+      setScale(targetWidth / 500);
     };
 
     handleResize();
     window.addEventListener('resize', handleResize);
+
     return () => window.removeEventListener('resize', handleResize);
   }, [viewMode]);
 
   const getBorderStyle = (borderPosition, size, style, color) => {
     if (!style || style === 'none' || !size) return {};
+
     const b = `${size}px ${style} ${color || '#ffffff'}`;
+
     switch (borderPosition) {
       case 'all':
         return { border: b };
@@ -72,10 +75,32 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
     }
   };
 
+  const getAnimationProps = (el) => {
+    const transition = el.transition ?? el.props?.transition;
+
+    const enabled =
+      transition?.effectEnabled &&
+      transition?.effectType &&
+      transition.effectType !== 'none';
+
+    return {
+      ref: inViewRef(el.id, transition),
+      className: enabled
+        ? `scroll-reveal animate-${transition.effectType}`
+        : undefined,
+      style: enabled
+        ? {
+          '--reveal-duration': `${transition.effectDuration ?? 1}s`,
+          '--reveal-delay': `${transition.effectDelay ?? 0}s`,
+          '--reveal-easing': transition.effectEasing || 'ease'
+        }
+        : {}
+    };
+  };
+
   const renderElement = (el) => {
     const { id, type, top, left, width, height, zIndex, props } = el;
 
-    // Suppress gsih1NSVB5 because its text is integrated cleanly into RsvpBox header
     if (id === 'gsih1NSVB5') return null;
 
     const baseStyle = {
@@ -88,10 +113,17 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       boxSizing: 'border-box'
     };
 
+    const animation = getAnimationProps(el);
+
     // 1. COUNTDOWN BOX
     if (type === 'CountdownBoxV2') {
       return (
-        <div ref={inViewRef} key={id} style={baseStyle}>
+        <div
+          key={id}
+          ref={animation.ref}
+          className={animation.className}
+          style={{ ...baseStyle, ...animation.style }}
+        >
           <CountdownBox targetDate="2026-11-29T17:30:00+07:00" />
         </div>
       );
@@ -100,7 +132,12 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
     // 2. CALENDAR BOX
     if (type === 'CalendarBoxV2') {
       return (
-        <div ref={inViewRef} key={id} style={baseStyle}>
+        <div
+          key={id}
+          ref={animation.ref}
+          className={animation.className}
+          style={{ ...baseStyle, ...animation.style }}
+        >
           <CalendarBox selectedDay={29} month={11} year={2026} />
         </div>
       );
@@ -109,7 +146,13 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
     // 3. RSVP BOX
     if (type === 'RsvpBoxV2') {
       return (
-        <div key={id} id="rsvp-section" style={baseStyle}>
+        <div
+          key={id}
+          id="rsvp-section"
+          ref={animation.ref}
+          className={animation.className}
+          style={{ ...baseStyle, ...animation.style }}
+        >
           <RsvpBox
             titleText={props.titleText || 'Xác nhận tham dự'}
             subtitleText="Hãy xác nhận sự có mặt của Quý Khách để gia đình chúng tôi chuẩn bị đón tiếp chu đáo nhất!"
@@ -120,7 +163,7 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       );
     }
 
-    // 4. GEOMETRIC BOX (Event cards, Gradients, Separators)
+    // 4. GEOMETRIC BOX
     if (type === 'GeometricBox') {
       const radius = props.borderRadius ? `${props.borderRadius[0]}px` : '0px';
       const isCard = id === '2CxL6I5WMt' || id === '9nTWaf4Zlg';
@@ -128,8 +171,11 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       return (
         <div
           key={id}
+          ref={animation.ref}
+          className={animation.className}
           style={{
             ...baseStyle,
+            ...animation.style,
             background: props.fill || '#5D041E',
             borderRadius: radius,
             opacity: props.opacity ?? 1,
@@ -149,8 +195,11 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       return (
         <div
           key={id}
+          ref={animation.ref}
+          className={animation.className}
           style={{
             ...baseStyle,
+            ...animation.style,
             backgroundColor: props.fill || props.borderColor || '#5D041E',
             transform: props.rotation ? `rotate(${props.rotation}deg)` : undefined,
             opacity: props.opacity ?? 1
@@ -166,10 +215,18 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       const isGalleryPhoto = galleryPhotoIds.includes(id);
 
       const transformParts = [];
-      if (props.flipX && props.flipY) transformParts.push('scale(-1, -1)');
-      else if (props.flipX) transformParts.push('scale(-1, 1)');
-      else if (props.flipY) transformParts.push('scale(1, -1)');
-      if (props.rotation) transformParts.push(`rotate(${props.rotation}deg)`);
+
+      if (props.flipX && props.flipY) {
+        transformParts.push('scale(-1, -1)');
+      } else if (props.flipX) {
+        transformParts.push('scale(-1, 1)');
+      } else if (props.flipY) {
+        transformParts.push('scale(1, -1)');
+      }
+
+      if (props.rotation) {
+        transformParts.push(`rotate(${props.rotation}deg)`);
+      }
 
       const borderStyles = getBorderStyle(
         props.borderPosition,
@@ -181,6 +238,8 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       return (
         <div
           key={id}
+          ref={animation.ref}
+          className={animation.className}
           onClick={() => {
             if (isGalleryPhoto) {
               const idx = galleryPhotoIds.indexOf(id);
@@ -189,6 +248,7 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
           }}
           style={{
             ...baseStyle,
+            ...animation.style,
             backgroundImage: `url("${imgSrc}")`,
             backgroundSize: 'cover',
             backgroundPosition: '50% 50%',
@@ -197,8 +257,7 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
             opacity: props.opacity ?? 1,
             cursor: isGalleryPhoto ? 'pointer' : 'default',
             boxShadow: props.hasBoxShadow
-              ? `${props.boxShadow?.offsetX || 0}px ${props.boxShadow?.offsetY || 4}px ${props.boxShadow?.blur || 12
-              }px ${props.boxShadow?.color || 'rgba(0,0,0,0.15)'}`
+              ? `${props.boxShadow?.offsetX || 0}px ${props.boxShadow?.offsetY || 4}px ${props.boxShadow?.blur || 12}px ${props.boxShadow?.color || 'rgba(0,0,0,0.15)'}`
               : 'none',
             transform: transformParts.length ? transformParts.join(' ') : undefined,
             ...borderStyles,
@@ -211,7 +270,7 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
 
     // 7. TEXT BOX
     if (type === 'TextBox') {
-      let text = props.text || '';
+      const text = props.text || '';
       const font = props.fontFamily || 'Lora, serif';
       const url = props.clickAction?.url || props.hyperlink;
       const isLink = Boolean(url);
@@ -244,7 +303,6 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
         ...borderStyles
       };
 
-      // Button / Link (e.g. Xem chỉ đường on Google Maps)
       if (isLink) {
         return (
           <a
@@ -252,9 +310,14 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className={isPulse ? 'animate-pulse-glow' : ''}
+            ref={animation.ref}
+            className={[
+              animation.className,
+              isPulse ? 'animate-pulse-glow' : ''
+            ].filter(Boolean).join(' ')}
             style={{
               ...baseStyle,
+              ...animation.style,
               ...textStyle,
               display: 'flex',
               alignItems: 'center',
@@ -273,14 +336,23 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       return (
         <div
           key={id}
+          ref={animation.ref}
+          className={[
+            animation.className,
+            isPulse ? 'animate-pulse-glow' : ''
+          ].filter(Boolean).join(' ')}
           style={{
             ...baseStyle,
+            ...animation.style,
             ...textStyle,
             height: 'auto',
             display: 'block'
           }}
         >
-          <div style={{ width: '100%' }} dangerouslySetInnerHTML={{ __html: text }} />
+          <div
+            style={{ width: '100%' }}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
         </div>
       );
     }
@@ -304,7 +376,6 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
         justifyContent: 'flex-start'
       }}
     >
-      {/* Canvas Wrapper */}
       <div
         style={{
           width: `${scaledWidth}px`,
@@ -326,23 +397,27 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
             left: 0,
             transformOrigin: 'top left',
             transform: `scale(${scale})`,
-            backgroundColor: '#ffffff'
+            backgroundColor: '#ffffff',
+            overflow: 'visible'
           }}
         >
           {pageData.elements.map(renderElement)}
         </div>
       </div>
 
-      {/* Lightbox Modal */}
       <Lightbox
         images={galleryImages}
         currentIndex={lightboxIndex}
         onClose={() => setLightboxIndex(null)}
         onPrev={() =>
-          setLightboxIndex((prev) => (prev > 0 ? prev - 1 : galleryImages.length - 1))
+          setLightboxIndex(prev =>
+            prev > 0 ? prev - 1 : galleryImages.length - 1
+          )
         }
         onNext={() =>
-          setLightboxIndex((prev) => (prev < galleryImages.length - 1 ? prev + 1 : 0))
+          setLightboxIndex(prev =>
+            prev < galleryImages.length - 1 ? prev + 1 : 0
+          )
         }
       />
     </div>

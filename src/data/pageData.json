@@ -43,7 +43,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -110,7 +110,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -175,7 +175,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -240,7 +240,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -257,7 +257,7 @@
         "padding": [
           0,
           0,
-          0,
+          100,
           0
         ],
         "borderRadius": [
@@ -305,7 +305,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -370,7 +370,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -435,7 +435,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "none",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -500,7 +500,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -576,7 +576,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -644,7 +644,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -720,7 +720,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -799,7 +799,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -871,7 +871,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0,
           "effectEasing": "ease"
         },
@@ -929,7 +929,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInLeft",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1007,7 +1007,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1086,7 +1086,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1154,7 +1154,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInRight",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1221,7 +1221,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1286,7 +1286,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1362,7 +1362,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1441,7 +1441,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1520,7 +1520,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "flipInX",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1588,7 +1588,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1666,7 +1666,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInLeft",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1729,7 +1729,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1802,7 +1802,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInRight",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1881,7 +1881,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -1960,7 +1960,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInLeft",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2039,7 +2039,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInRight",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2118,7 +2118,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInLeft",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2197,7 +2197,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInRight",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2276,7 +2276,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "flipInX",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2339,7 +2339,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "none",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2412,7 +2412,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "zoomIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2491,7 +2491,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "zoomIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2570,7 +2570,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "flipInX",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2649,7 +2649,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2728,7 +2728,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2807,7 +2807,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "pulse",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2874,7 +2874,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "none",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -2947,7 +2947,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "zoomIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3026,7 +3026,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "zoomIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3105,7 +3105,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "flipInX",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3184,7 +3184,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3263,7 +3263,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3342,7 +3342,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "pulse",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3386,7 +3386,7 @@
       "top": 3418.6,
       "left": 0,
       "width": 500,
-      "height": 331,
+      "height": 360,
       "zIndex": 41,
       "props": {
         "backgroundColor": "transparent",
@@ -3414,7 +3414,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3431,7 +3431,7 @@
         "width": 500,
         "height": 331,
         "padding": [
-          0,
+          10,
           0,
           0,
           0
@@ -3492,7 +3492,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "zoomIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3560,7 +3560,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInLeft",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3627,7 +3627,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "flipInY",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3694,7 +3694,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInRight",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3737,7 +3737,7 @@
       "zIndex": 26,
       "props": {
         "text": "<div>Mỗi câu chuyện tình yêu đều có một hành trình riêng. Sau những ngày tháng cùng nhau trưởng thành, chúng tôi quyết định về chung một nhà và viết tiếp câu chuyện ấy bằng tình yêu, sự tin tưởng và hạnh phúc.</div>",
-        "fontFamily": "'Libre Baskerville', serif",
+        "fontFamily": "Signature",
         "textAlign": "center",
         "fontWeight": "normal",
         "textTransform": "none",
@@ -3772,7 +3772,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3840,7 +3840,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3889,7 +3889,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -3926,7 +3926,7 @@
       "left": 0,
       "width": 122,
       "height": 215,
-      "zIndex": 94,
+      "zIndex": 98,
       "props": {
         "backgroundColor": "transparent",
         "shadow": 0,
@@ -3948,12 +3948,12 @@
         },
         "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtNF8xNzgyMTAyNDQxXzVjMw.png",
         "alt": "",
-        "zIndex": 94,
+        "zIndex": 98,
         "locked": false,
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4018,7 +4018,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4078,7 +4078,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "none",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4151,7 +4151,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInRight",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4230,7 +4230,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4299,7 +4299,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0,
           "effectEasing": "ease"
         },
@@ -4366,7 +4366,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4442,7 +4442,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4510,7 +4510,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInRight",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4577,7 +4577,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInLeft",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4643,7 +4643,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInRight",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4710,7 +4710,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInLeft",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4776,7 +4776,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInRight",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4842,7 +4842,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInLeft",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -4937,7 +4937,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0,
           "effectEasing": "ease"
         },
@@ -5006,7 +5006,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -5074,7 +5074,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -5135,7 +5135,7 @@
         "transition": {
           "effectEnabled": false,
           "effectType": "fadeIn",
-          "effectDuration": 1,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -5208,7 +5208,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
@@ -5287,7 +5287,7 @@
         "transition": {
           "effectEnabled": true,
           "effectType": "fadeInUp",
-          "effectDuration": 1.5,
+          "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
