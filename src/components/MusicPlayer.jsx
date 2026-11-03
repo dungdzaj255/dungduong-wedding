@@ -1,48 +1,159 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Music, Volume2, VolumeX } from 'lucide-react';
+import { Volume2, VolumeX } from 'lucide-react';
 
-export default function MusicPlayer({ src = '/music.mp3', title = 'Beautiful Girl' }) {
+export default function MusicPlayer({
+  src = '/music.mp3',
+  title = 'Beautiful Girl'
+}) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
+
   const audioRef = useRef(null);
+  const volumeRef = useRef(0.7);
+  const fadeTimerRef = useRef(null);
+  const hasInteractedRef = useRef(false);
+  const isFadingRef = useRef(false);
+
+  const clearFade = () => {
+    if (fadeTimerRef.current) {
+      clearInterval(fadeTimerRef.current);
+      fadeTimerRef.current = null;
+    }
+  };
+
+  const fadeIn = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    clearFade();
+    isFadingRef.current = false;
+
+    try {
+      const startVolume = audio.volume;
+      const targetVolume = volumeRef.current;
+
+      if (audio.paused) {
+        audio.volume = 0;
+        await audio.play();
+      }
+
+      setIsPlaying(true);
+
+      const duration = 1200;
+      const steps = 30;
+      let step = 0;
+
+      fadeTimerRef.current = setInterval(() => {
+        step++;
+
+        audio.volume = Math.min(
+          targetVolume,
+          startVolume + ((targetVolume - startVolume) * step) / steps
+        );
+
+        if (step >= steps) {
+          clearFade();
+        }
+      }, duration / steps);
+    } catch (err) {
+      setIsPlaying(false);
+    }
+  };
+
+  const fadeOut = () => {
+    const audio = audioRef.current;
+    if (!audio || audio.paused) return;
+
+    clearFade();
+
+    setIsPlaying(false);
+    isFadingRef.current = true;
+
+    const startVolume = audio.volume;
+    const duration = 700;
+    const steps = 30;
+    let step = 0;
+
+    fadeTimerRef.current = setInterval(() => {
+      step++;
+
+      audio.volume = Math.max(
+        0,
+        startVolume * (1 - step / steps)
+      );
+
+      if (step >= steps) {
+        clearFade();
+        audio.pause();
+        audio.volume = 0;
+        isFadingRef.current = false;
+      }
+    }, duration / steps);
+  };
 
   useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.volume = volumeRef.current;
+
     const handleFirstInteraction = () => {
-      if (!hasInteracted && audioRef.current) {
-        setHasInteracted(true);
-        audioRef.current.play().then(() => {
-          setIsPlaying(true);
-        }).catch(() => {
-          // Browser prevented autoplay
-        });
+      if (hasInteractedRef.current) return;
+
+      hasInteractedRef.current = true;
+
+      if (audio.paused && !isFadingRef.current) {
+        fadeIn();
       }
+
+      document.removeEventListener('click', handleFirstInteraction);
+      document.removeEventListener('touchstart', handleFirstInteraction);
     };
 
-    window.addEventListener('click', handleFirstInteraction, { once: true });
-    window.addEventListener('touchstart', handleFirstInteraction, { once: true });
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+
+    document.addEventListener('click', handleFirstInteraction);
+    document.addEventListener('touchstart', handleFirstInteraction);
+
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
+
+    fadeIn();
 
     return () => {
-      window.removeEventListener('click', handleFirstInteraction);
-      window.removeEventListener('touchstart', handleFirstInteraction);
+      document.removeEventListener('click', handleFirstInteraction);
+      document.removeEventListener('touchstart', handleFirstInteraction);
+
+      audio.removeEventListener('play', handlePlay);
+      audio.removeEventListener('pause', handlePause);
+
+      clearFade();
     };
-  }, [hasInteracted]);
+  }, []);
 
   const togglePlay = (e) => {
     e.stopPropagation();
+
     if (!audioRef.current) return;
-    if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(false);
+
+    hasInteractedRef.current = true;
+
+    if (!audioRef.current.paused && !isFadingRef.current) {
+      fadeOut();
     } else {
-      audioRef.current.play().then(() => {
-        setIsPlaying(true);
-      }).catch(err => console.log('Audio play error:', err));
+      fadeIn();
     }
   };
 
   return (
     <>
-      <audio ref={audioRef} src={src} loop preload="auto" />
+      <audio
+        ref={audioRef}
+        src={src}
+        loop
+        preload="auto"
+      />
+
       <button
         onClick={togglePlay}
         aria-label={isPlaying ? 'Tắt nhạc' : 'Bật nhạc'}
@@ -66,9 +177,7 @@ export default function MusicPlayer({ src = '/music.mp3', title = 'Beautiful Gir
           transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
         }}
       >
-        <span className={isPlaying ? 'animate-spin-slow' : ''} style={{ display: 'inline-flex' }}>
-          <Music size={22} />
-        </span>
+        {isPlaying ? <Volume2 size={22} /> : <VolumeX size={22} />}
       </button>
     </>
   );

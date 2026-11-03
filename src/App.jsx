@@ -28,6 +28,7 @@ export default function App() {
   React.useEffect(() => {
     const pause = () => setIsPaused(true);
     window.addEventListener('wheel', pause, { passive: true });
+    window.addEventListener('touchstart', pause, { passive: true });
     return () => {
       window.removeEventListener('wheel', pause);
     };
