@@ -9,7 +9,7 @@ export default function App() {
 
   // Auto‑scroll slowly and continuously to the bottom, then loop back to top
   React.useEffect(() => {
-    const stepPx = 1; // pixels per tick
+    const stepPx = 2; // pixels per tick
     const intervalMs = 30; // ~30 fps
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     let currentPos = window.scrollY;
@@ -28,20 +28,14 @@ export default function App() {
   React.useEffect(() => {
     const pause = () => setIsPaused(true);
     window.addEventListener('wheel', pause, { passive: true });
-    window.addEventListener('touchstart', pause, { passive: true });
-    window.addEventListener('keydown', pause);
     return () => {
       window.removeEventListener('wheel', pause);
-      window.removeEventListener('touchstart', pause);
-      window.removeEventListener('keydown', pause);
     };
   }, []);
 
-  // Resume auto‑scroll when tapping on the background (root container)
+  // Toggle auto‑scroll when tapping on page
   const handleRootClick = (e) => {
-    if (e.target === rootRef.current) {
-      setIsPaused(false);
-    }
+    setIsPaused(prev => !prev);
   };
 
 
@@ -78,16 +72,15 @@ export default function App() {
   };
 
   return (
-    <div
-      style={{
-        minHeight: '100vh',
-        backgroundColor: '#1f1e1d',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        position: 'relative'
-      }}
+    <div ref={rootRef} onClick={handleRootClick} style={{
+      minHeight: '100vh',
+      backgroundColor: '#1f1e1d',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      position: 'relative'
+    }}
     >
       {/* Background Audio Player */}
       <MusicPlayer src="/music.mp3" title="Beautiful Girl" />
