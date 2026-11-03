@@ -69,7 +69,7 @@ export default function MusicPlayer({
     isFadingRef.current = true;
 
     const startVolume = audio.volume;
-    const duration = 700;
+    const duration = 1000;
     const steps = 30;
     let step = 0;
 

@@ -8,21 +8,48 @@ export default function App() {
   const [isPaused, setIsPaused] = React.useState(false);
 
   // Auto‑scroll slowly and continuously to the bottom, then loop back to top
-  React.useEffect(() => {
-    const stepPx = 2; // pixels per tick
-    const intervalMs = 30; // ~30 fps
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    let currentPos = window.scrollY;
-    const timer = setInterval(() => {
-      if (isPaused) return;
-      currentPos += stepPx;
-      if (currentPos > maxScroll) {
-        currentPos = 0;
-      }
-      window.scrollTo({ top: currentPos, behavior: 'auto' });
-    }, intervalMs);
-    return () => clearInterval(timer);
-  }, [isPaused]);
+    const hasStartedRef = useRef(false);
+
+    useEffect(() => {
+        const stepPx = 2;
+        const intervalMs = 30;
+        let timer = null;
+        let timeout = null;
+
+        const startScroll = () => {
+            if (timer) clearInterval(timer);
+
+            timer = setInterval(() => {
+                if (isPaused) return;
+
+                const maxScroll =
+                    document.documentElement.scrollHeight - window.innerHeight;
+
+                if (maxScroll <= 0) return;
+
+                const nextPos = window.scrollY + stepPx;
+
+                window.scrollTo({
+                    top: nextPos >= maxScroll ? 0 : nextPos,
+                    behavior: 'auto'
+                });
+            }, intervalMs);
+        };
+
+        if (!hasStartedRef.current) {
+            timeout = setTimeout(() => {
+                hasStartedRef.current = true;
+                startScroll();
+            }, 2000);
+        } else {
+            startScroll();
+        }
+
+        return () => {
+            clearTimeout(timeout);
+            if (timer) clearInterval(timer);
+        };
+    }, [isPaused]);
 
   // Pause auto‑scroll on user interaction (scroll, touch, wheel, key)
   React.useEffect(() => {
@@ -42,13 +69,6 @@ export default function App() {
 
   const [viewMode, setViewMode] = useState('responsive'); // 'responsive' | 'mobile' | 'full'
   const [copied, setCopied] = useState(false);
-
-  const scrollToRsvp = () => {
-    const el = document.getElementById('rsvp-section');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

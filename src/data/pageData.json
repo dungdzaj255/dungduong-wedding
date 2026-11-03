@@ -577,7 +577,7 @@
           "effectEnabled": true,
           "effectType": "fadeInUp",
           "effectDuration": 2,
-          "effectDelay": 0.5,
+          "effectDelay": 1,
           "effectEasing": "ease"
         },
         "hyperlink": "",
@@ -851,7 +851,7 @@
           "effectEnabled": true,
           "effectType": "fadeInLeft",
           "effectDuration": 2,
-          "effectDelay": 0.5,
+          "effectDelay": 1.5,
           "effectEasing": "ease"
         },
         "unoptimized": false,
@@ -1076,7 +1076,7 @@
           "effectEnabled": true,
           "effectType": "fadeInRight",
           "effectDuration": 2,
-          "effectDelay": 0.5,
+          "effectDelay": 1.5,
           "effectEasing": "ease"
         },
         "unoptimized": false,
@@ -1442,7 +1442,7 @@
           "effectEnabled": true,
           "effectType": "flipInX",
           "effectDuration": 2,
-          "effectDelay": 0.5,
+          "effectDelay": 1.5,
           "effectEasing": "ease"
         },
         "hyperlink": "",
@@ -1470,7 +1470,7 @@
           0,
           0
         ],
-        "letterSpacing": 0,
+        "letterSpacing": 1,
         "lineHeight": 1.5,
         "scale": 1
       }
@@ -1588,7 +1588,7 @@
           "effectEnabled": true,
           "effectType": "fadeInLeft",
           "effectDuration": 2,
-          "effectDelay": 0.5,
+          "effectDelay": 1,
           "effectEasing": "ease"
         },
         "hyperlink": "",
@@ -1724,7 +1724,7 @@
           "effectEnabled": true,
           "effectType": "fadeInRight",
           "effectDuration": 2,
-          "effectDelay": 0.5,
+          "effectDelay": 1.5,
           "effectEasing": "ease"
         },
         "hyperlink": "",
@@ -2040,7 +2040,7 @@
           "effectEnabled": true,
           "effectType": "fadeInLeft",
           "effectDuration": 2,
-          "effectDelay": 0.5,
+          "effectDelay": 1,
           "effectEasing": "ease"
         },
         "hyperlink": "",
@@ -2119,7 +2119,7 @@
           "effectEnabled": true,
           "effectType": "fadeInRight",
           "effectDuration": 2,
-          "effectDelay": 0.5,
+          "effectDelay": 1,
           "effectEasing": "ease"
         },
         "hyperlink": "",
