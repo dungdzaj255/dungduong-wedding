@@ -2263,7 +2263,7 @@
     {
       "id": "nQ5cbTU5ey",
       "type": "TextBox",
-      "top": 2624.7,
+      "top": 2620,
       "left": 1.5,
       "width": 500,
       "height": "auto",
@@ -2321,7 +2321,7 @@
         "left": 1.5,
         "width": 500,
         "height": "auto",
-        "fontSize": 19,
+        "fontSize": 22,
         "padding": [
           0,
           0,
@@ -2739,7 +2739,7 @@
       }
     },
     {
-      "id": "9nTWaf4Zlg",
+      "id": "timeline_bg_2026",
       "type": "GeometricBox",
       "top": 2984,
       "left": 23.26,
@@ -2796,23 +2796,22 @@
       }
     },
     {
-      "id": "Q0gIppzxPv",
+      "id": "timeline_title_2026",
       "type": "TextBox",
-      "top": 3016.15,
-      "left": 1.56,
+      "top": 3010,
+      "left": 0,
       "width": 500,
       "height": "auto",
       "zIndex": 23,
       "props": {
-        "text": "<div>lễ thành hôn</div>",
-        "fontFamily": "Lora Regular",
+        "text": "<div>timeline</div>",
+        "fontFamily": "\"Times New Roman\", serif",
         "textAlign": "center",
-        "fontWeight": "bold",
+        "fontWeight": "normal",
         "textTransform": "uppercase",
         "textDecoration": "none",
         "color": "rgb(255, 255, 255)",
         "backgroundColor": "transparent",
-        "shadow": 0,
         "opacity": 1,
         "rotation": 0,
         "fontStyle": "normal",
@@ -2852,11 +2851,11 @@
         },
         "curve": 0,
         "eventType": "none",
-        "top": 3016.15,
+        "top": 3010,
         "left": 1.56,
         "width": 500,
         "height": "auto",
-        "fontSize": 19,
+        "fontSize": 24,
         "padding": [
           0,
           0,
@@ -2869,72 +2868,78 @@
           0,
           0
         ],
-        "letterSpacing": 0,
+        "letterSpacing": 3,
         "lineHeight": 1.5,
         "scale": 1
       }
     },
     {
-      "id": "0ypWkDv-DE",
-      "type": "TextBox",
-      "top": 3057.06,
-      "left": 1.2,
-      "width": 500,
-      "height": "auto",
-      "zIndex": 25,
+      "id": "timeline_line_2026",
+      "type": "GeometricBox",
+      "top": 3090,
+      "left": 247,
+      "width": 1,
+      "height": 193,
+      "zIndex": 5,
       "props": {
-        "text": "<div>ĐƯỢC TỔ CHỨC VÀO LÚC 17:30 - chủ nhật</div>",
+        "zIndex": 5,
+        "shapeType": "rectangle",
+        "fill": "rgba(255, 255, 255)",
+        "opacity": 0.4,
+        "rotation": 0,
+        "borderPosition": "all",
+        "borderSize": 0,
+        "borderStyle": "none",
+        "borderColor": "#000000",
+        "hasBoxShadow": false,
+        "height": 65,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "borderRadius": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "scale": 1
+      }
+    },
+    {
+      "id": "timeline_time_0",
+      "type": "TextBox",
+      "top": 3082,
+      "left": 160,
+      "zIndex": 10,
+      "props": {
+        "text": "<div>17:00</div>",
         "fontFamily": "Lora Regular",
-        "textAlign": "center",
-        "fontWeight": "normal",
-        "textTransform": "uppercase",
+        "textAlign": "right",
+        "fontWeight": "bold",
+        "textTransform": "none",
         "textDecoration": "none",
-        "color": "rgb(255, 255, 255)",
+        "color": "rgba(255, 255, 255)",
         "backgroundColor": "transparent",
-        "shadow": 0,
         "opacity": 1,
         "rotation": 0,
         "fontStyle": "normal",
         "borderPosition": "all",
-        "borderSize": 1,
+        "borderSize": 0,
         "borderStyle": "none",
         "borderColor": "#000000",
         "hasBoxShadow": false,
-        "boxShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 8,
-          "spread": 0,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "hasTextShadow": false,
-        "textShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 4,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "zIndex": 25,
+        "zIndex": 10,
         "locked": false,
         "transition": {
           "effectEnabled": true,
-          "effectType": "zoomIn",
+          "effectType": "fadeInLeft",
           "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
-        "hyperlink": "",
-        "continuousAnimation": {
-          "type": "none",
-          "duration": 1.5,
-          "delay": 0.5
-        },
-        "curve": 0,
-        "eventType": "none",
-        "top": 3057.06,
-        "left": 1.2,
-        "width": 500,
-        "height": "auto",
         "fontSize": 16,
         "padding": [
           0,
@@ -2948,73 +2953,44 @@
           0,
           0
         ],
-        "letterSpacing": 0,
+        "letterSpacing": 1,
         "lineHeight": 1.5,
         "scale": 1
       }
     },
     {
-      "id": "LMCkqyTzJ-",
+      "id": "timeline_time_1",
       "type": "TextBox",
-      "top": 3097.16,
-      "left": 153,
-      "width": 192,
-      "height": 48,
-      "zIndex": 5,
+      "top": 3171,
+      "left": 160,
+      "zIndex": 10,
       "props": {
-        "text": "<p>29.11.2026</p>",
-        "fontFamily": "Libre Baskerville",
-        "textAlign": "center",
+        "text": "<div>17:30</div>",
+        "fontFamily": "Lora Regular",
+        "textAlign": "right",
         "fontWeight": "bold",
-        "textTransform": "uppercase",
+        "textTransform": "none",
         "textDecoration": "none",
-        "color": "rgb(255, 255, 255)",
+        "color": "rgba(255, 255, 255)",
         "backgroundColor": "transparent",
-        "shadow": 0,
         "opacity": 1,
         "rotation": 0,
         "fontStyle": "normal",
-        "borderPosition": "top-bottom",
-        "borderSize": 1,
-        "borderStyle": "solid",
-        "borderColor": "rgb(255, 255, 255)",
+        "borderPosition": "all",
+        "borderSize": 0,
+        "borderStyle": "none",
+        "borderColor": "#000000",
         "hasBoxShadow": false,
-        "boxShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 8,
-          "spread": 0,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "hasTextShadow": false,
-        "textShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 4,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "zIndex": 5,
+        "zIndex": 10,
         "locked": false,
         "transition": {
           "effectEnabled": true,
-          "effectType": "flipInX",
+          "effectType": "fadeInLeft",
           "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
-        "hyperlink": "",
-        "continuousAnimation": {
-          "type": "none",
-          "duration": 1.5,
-          "delay": 0.5
-        },
-        "curve": 0,
-        "eventType": "none",
-        "top": 3097.16,
-        "left": 153,
-        "width": 192,
-        "height": 48,
-        "fontSize": 30,
+        "fontSize": 16,
         "padding": [
           0,
           0,
@@ -3027,23 +3003,217 @@
           0,
           0
         ],
-        "letterSpacing": 0,
-        "lineHeight": 1.6,
+        "letterSpacing": 1,
+        "lineHeight": 1.5,
         "scale": 1
       }
     },
     {
-      "id": "pqh8CNtsqx",
+      "id": "timeline_time_2",
       "type": "TextBox",
-      "top": 3168.02,
-      "left": -0.96,
-      "width": 500,
-      "height": "auto",
+      "top": 3267,
+      "left": 160,
+      "zIndex": 10,
+      "props": {
+        "text": "<div>18:00</div>",
+        "fontFamily": "Lora Regular",
+        "textAlign": "right",
+        "fontWeight": "bold",
+        "textTransform": "none",
+        "textDecoration": "none",
+        "color": "rgba(255, 255, 255)",
+        "backgroundColor": "transparent",
+        "opacity": 1,
+        "rotation": 0,
+        "fontStyle": "normal",
+        "borderPosition": "all",
+        "borderSize": 0,
+        "borderStyle": "none",
+        "borderColor": "#000000",
+        "hasBoxShadow": false,
+        "zIndex": 10,
+        "locked": false,
+        "transition": {
+          "effectEnabled": true,
+          "effectType": "fadeInLeft",
+          "effectDuration": 2,
+          "effectDelay": 0.5,
+          "effectEasing": "ease"
+        },
+        "fontSize": 16,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "borderRadius": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "letterSpacing": 1,
+        "lineHeight": 1.5,
+        "scale": 1
+      }
+    },
+    {
+      "id": "timeline_dot_0",
+      "type": "GeometricBox",
+      "top": 3088,
+      "left": 242.5,
+      "width": 10,
+      "height": 10,
       "zIndex": 15,
       "props": {
-        "text": "<div>(Tức ngày 21 tháng 10 năm Bính Ngọ)</div>",
+        "zIndex": 15,
+        "shapeType": "ellipse",
+        "fill": "rgb(255, 255, 255)",
+        "opacity": 1,
+        "rotation": 0,
+        "borderPosition": "all",
+        "borderSize": 0,
+        "borderStyle": "none",
+        "borderColor": "#000000",
+        "hasBoxShadow": true,
+        "boxShadow": {
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 0,
+          "spread": 2,
+          "color": "rgba(236, 228, 216, 0.25)"
+        },
+        "transition": {
+          "effectEnabled": true,
+          "effectType": "zoomIn",
+          "effectDuration": 1.5,
+          "effectDelay": 0.3,
+          "effectEasing": "ease"
+        },
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "borderRadius": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "scale": 1
+      }
+    },
+    {
+      "id": "timeline_dot_1",
+      "type": "GeometricBox",
+      "top": 3178,
+      "left": 242.5,
+      "width": 10,
+      "height": 10,
+      "zIndex": 15,
+      "props": {
+        "zIndex": 15,
+        "shapeType": "ellipse",
+        "fill": "rgb(255, 255, 255)",
+        "opacity": 1,
+        "rotation": 0,
+        "borderPosition": "all",
+        "borderSize": 0,
+        "borderStyle": "none",
+        "borderColor": "#000000",
+        "hasBoxShadow": true,
+        "boxShadow": {
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 0,
+          "spread": 2,
+          "color": "rgba(236, 228, 216, 0.25)"
+        },
+        "transition": {
+          "effectEnabled": true,
+          "effectType": "zoomIn",
+          "effectDuration": 1.5,
+          "effectDelay": 0.3,
+          "effectEasing": "ease"
+        },
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "borderRadius": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "scale": 1
+      }
+    },
+    {
+      "id": "timeline_dot_2",
+      "type": "GeometricBox",
+      "top": 3274,
+      "left": 242.5,
+      "width": 10,
+      "height": 10,
+      "zIndex": 15,
+      "props": {
+        "zIndex": 15,
+        "shapeType": "ellipse",
+        "fill": "rgb(255, 255, 255)",
+        "opacity": 1,
+        "rotation": 0,
+        "borderPosition": "all",
+        "borderSize": 0,
+        "borderStyle": "none",
+        "borderColor": "#000000",
+        "hasBoxShadow": true,
+        "boxShadow": {
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 0,
+          "spread": 2,
+          "color": "rgba(236, 228, 216, 0.25)"
+        },
+        "transition": {
+          "effectEnabled": true,
+          "effectType": "zoomIn",
+          "effectDuration": 1.5,
+          "effectDelay": 0.3,
+          "effectEasing": "ease"
+        },
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "borderRadius": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "scale": 1
+      }
+    },
+    {
+      "id": "timeline_event_0",
+      "type": "TextBox",
+      "top": 3081,
+      "left": 290,
+      "width": 170,
+      "height": 45,
+      "zIndex": 10,
+      "props": {
+        "text": "<div>Đón khách</div>",
         "fontFamily": "Lora Regular",
-        "textAlign": "center",
+        "textAlign": "left",
         "fontWeight": "normal",
         "textTransform": "none",
         "textDecoration": "none",
@@ -3058,41 +3228,15 @@
         "borderStyle": "none",
         "borderColor": "#000000",
         "hasBoxShadow": false,
-        "boxShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 8,
-          "spread": 0,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "hasTextShadow": false,
-        "textShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 4,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "zIndex": 15,
+        "zIndex": 10,
         "locked": false,
         "transition": {
           "effectEnabled": true,
-          "effectType": "fadeInUp",
+          "effectType": "fadeInRight",
           "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
-        "hyperlink": "",
-        "continuousAnimation": {
-          "type": "none",
-          "duration": 1.5,
-          "delay": 0.5
-        },
-        "curve": 0,
-        "eventType": "none",
-        "top": 3168.02,
-        "left": -0.96,
-        "width": 500,
-        "height": "auto",
         "fontSize": 16,
         "padding": [
           0,
@@ -3112,19 +3256,19 @@
       }
     },
     {
-      "id": "BNe7wnMEle",
+      "id": "timeline_event_1",
       "type": "TextBox",
-      "top": 3215.59,
-      "left": -0.96,
-      "width": 500,
-      "height": "auto",
+      "top": 3170,
+      "left": 290,
+      "width": 170,
+      "height": 45,
       "zIndex": 10,
       "props": {
-        "text": "<p>TẠI TRUNG TÂM VĂN HÓA XÃ NGŨ HIỆP</p>",
+        "text": "<div>Lễ thành hôn</div>",
         "fontFamily": "Lora Regular",
-        "textAlign": "center",
-        "fontWeight": "bold",
-        "textTransform": "uppercase",
+        "textAlign": "left",
+        "fontWeight": "normal",
+        "textTransform": "none",
         "textDecoration": "none",
         "color": "rgb(255, 255, 255)",
         "backgroundColor": "transparent",
@@ -3137,42 +3281,16 @@
         "borderStyle": "none",
         "borderColor": "#000000",
         "hasBoxShadow": false,
-        "boxShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 8,
-          "spread": 0,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "hasTextShadow": false,
-        "textShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 4,
-          "color": "rgba(0,0,0,0.25)"
-        },
         "zIndex": 10,
         "locked": false,
         "transition": {
           "effectEnabled": true,
-          "effectType": "fadeInUp",
+          "effectType": "fadeInRight",
           "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
-        "hyperlink": "",
-        "continuousAnimation": {
-          "type": "none",
-          "duration": 1.5,
-          "delay": 0.5
-        },
-        "curve": 0,
-        "eventType": "none",
-        "top": 3215.59,
-        "left": -0.96,
-        "width": 500,
-        "height": "auto",
-        "fontSize": 19,
+        "fontSize": 16,
         "padding": [
           0,
           0,
@@ -3191,19 +3309,19 @@
       }
     },
     {
-      "id": "xKsBv0AnUa",
+      "id": "timeline_event_2",
       "type": "TextBox",
-      "top": 3266.76,
-      "left": 145.35,
-      "width": 209,
-      "height": 32,
-      "zIndex": 36,
+      "top": 3266,
+      "left": 290,
+      "width": 170,
+      "height": 45,
+      "zIndex": 10,
       "props": {
-        "text": "<p>xem chỉ đường</p>",
+        "text": "<div>Khai tiệc</div>",
         "fontFamily": "Lora Regular",
-        "textAlign": "center",
+        "textAlign": "left",
         "fontWeight": "normal",
-        "textTransform": "uppercase",
+        "textTransform": "none",
         "textDecoration": "none",
         "color": "rgb(255, 255, 255)",
         "backgroundColor": "transparent",
@@ -3213,48 +3331,18 @@
         "fontStyle": "normal",
         "borderPosition": "all",
         "borderSize": 1,
-        "borderStyle": "solid",
-        "borderColor": "rgb(255, 255, 255)",
+        "borderStyle": "none",
+        "borderColor": "#000000",
         "hasBoxShadow": false,
-        "boxShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 8,
-          "spread": 0,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "hasTextShadow": false,
-        "textShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 4,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "zIndex": 36,
+        "zIndex": 10,
         "locked": false,
         "transition": {
           "effectEnabled": true,
-          "effectType": "pulse",
+          "effectType": "fadeInRight",
           "effectDuration": 2,
           "effectDelay": 0.5,
           "effectEasing": "ease"
         },
-        "hyperlink": "",
-        "continuousAnimation": {
-          "type": "pulse",
-          "duration": 1,
-          "delay": 0.5
-        },
-        "curve": 0,
-        "eventType": "link",
-        "clickAction": {
-          "type": "link",
-          "url": "https://maps.app.goo.gl/N7hnAKUjhuyRwC6n7?g_st=ic"
-        },
-        "top": 3266.76,
-        "left": 145.35,
-        "width": 209,
-        "height": 32,
         "fontSize": 16,
         "padding": [
           0,
@@ -3263,13 +3351,13 @@
           0
         ],
         "borderRadius": [
-          100,
-          100,
-          100,
-          100
+          0,
+          0,
+          0,
+          0
         ],
         "letterSpacing": 0,
-        "lineHeight": 1.8,
+        "lineHeight": 1.5,
         "scale": 1
       }
     },
@@ -4257,7 +4345,7 @@
         "left": 0,
         "width": 500,
         "height": "auto",
-          "fontSize": 72,
+        "fontSize": 72,
         "padding": [
           0,
           0,
