@@ -239,7 +239,7 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
         <div
           key={id}
           ref={animation.ref}
-          className={animation.className}
+          className={el.className ? `${el.className} ${animation.className}` : animation.className}
           onClick={() => {
             if (isGalleryPhoto) {
               const idx = galleryPhotoIds.indexOf(id);

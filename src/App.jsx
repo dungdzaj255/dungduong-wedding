@@ -62,15 +62,20 @@ export default function App() {
   }, []);
 
   // Toggle auto‑scroll when tapping on page
-  const handleRootClick = (e) => {
-    setIsPaused(prev => !prev);
-  };
+    const handleRootClick = (e) => {
+        if (e.target.closest('button, a, .rsvp-box, .album-photo, .light-box')) {
+            setIsPaused(true);
+            return;
+        }
+        setIsPaused(prev => !prev);
+    };
 
 
   const [viewMode, setViewMode] = useState('responsive'); // 'responsive' | 'mobile' | 'full'
   const [copied, setCopied] = useState(false);
 
   const scrollToTop = () => {
+    setIsPaused(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

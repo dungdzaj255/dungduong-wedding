@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Check, Heart, Send, User } from 'lucide-react';
+import { submitWeddingForm } from '../services/weddingApi';
 
 export default function RsvpBox({
   titleText = 'Xác nhận tham dự',
@@ -16,23 +17,38 @@ export default function RsvpBox({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!fullName.trim()) {
-      setError('Vui lòng nhập họ và tên của bạn');
-      return;
-    }
-    setError('');
-    setIsSubmitting(true);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 700);
-  };
+        if (!fullName.trim()) {
+            setError('Vui lòng nhập họ và tên của bạn');
+            return;
+        }
+
+        setError('');
+        setIsSubmitting(true);
+
+        try {
+            await submitWeddingForm({
+                action: 'rsvp',
+                name: fullName.trim(),
+                guestSide,
+                attendance: willAttend,
+                numOfGuests: String(attendeeCount),
+                message: wishes.trim()
+            });
+
+            setIsSubmitted(true);
+        } catch (error) {
+            setError('Không thể gửi xác nhận. Vui lòng thử lại.');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
   return (
     <div
+      className={'rsvp-box'}
       style={{
         width: '100%',
         height: '100%',

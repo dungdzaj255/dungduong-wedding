@@ -4277,6 +4277,7 @@
     },
     {
       "id": "XLbd5vWc6e",
+      "className": "album-photo",
       "type": "PhotoBox",
       "top": 4940,
       "left": 11.63,
@@ -4342,6 +4343,7 @@
     },
     {
       "id": "03mmnniHWa",
+      "className": "album-photo",
       "type": "PhotoBox",
       "top": 4940,
       "left": 255.81,
@@ -4406,6 +4408,7 @@
     },
     {
       "id": "Q1YmzXFFjL",
+      "className": "album-photo",
       "type": "PhotoBox",
       "top": 5300,
       "left": 11.63,
@@ -4471,6 +4474,7 @@
     },
     {
       "id": "g5IV5uiGLc",
+      "className": "album-photo",
       "type": "PhotoBox",
       "top": 5300,
       "left": 255.81,
@@ -4535,6 +4539,7 @@
     },
     {
       "id": "ypuPzT_Oc4",
+      "className": "album-photo",
       "type": "PhotoBox",
       "top": 5660,
       "left": 11.63,
@@ -4599,6 +4604,7 @@
     },
     {
       "id": "F03liH8_uX",
+      "className": "album-photo",
       "type": "PhotoBox",
       "top": 5660,
       "left": 255.81,

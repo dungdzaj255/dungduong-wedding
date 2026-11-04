@@ -16,6 +16,7 @@ export default function Lightbox({ images, currentIndex, onClose, onPrev, onNext
 
   return (
     <div
+      className={'light-box'}
       onClick={onClose}
       style={{
         position: 'fixed',
