@@ -4990,7 +4990,7 @@
     {
       "id": "thankyou_overlay",
       "type": "GeometricBox",
-      "top": 6805,
+      "top": 6800,
       "left": 10,
       "width": 480,
       "height": 200,
@@ -5018,7 +5018,7 @@
     {
       "id": "7dN3KM6prr",
       "type": "TextBox",
-      "top": 6820,
+      "top": 6815,
       "left": -0.2,
       "width": 500,
       "height": "auto",
@@ -5097,7 +5097,7 @@
     {
       "id": "H-Hn6xsZEZ",
       "type": "TextBox",
-      "top": 6910,
+      "top": 6900,
       "left": 14.53,
       "width": 471,
       "height": 98,
