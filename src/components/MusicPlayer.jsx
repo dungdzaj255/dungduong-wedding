@@ -155,6 +155,7 @@ export default function MusicPlayer({
       />
 
       <button
+        className={"music-button"}
         onClick={togglePlay}
         aria-label={isPlaying ? 'Tắt nhạc' : 'Bật nhạc'}
         title={`${title} - ${isPlaying ? 'Đang phát' : 'Đã tạm dừng'}`}

@@ -56,6 +56,7 @@ export default function App() {
     const pause = () => setIsPaused(true);
     window.addEventListener('wheel', pause, { passive: true });
     window.addEventListener('touchstart', pause, { passive: true });
+    window.addEventListener('touchend', pause, { passive: true });
     return () => {
       window.removeEventListener('wheel', pause);
     };
@@ -63,6 +64,9 @@ export default function App() {
 
   // Toggle auto‑scroll when tapping on page
     const handleRootClick = (e) => {
+        if (e.target.closest('.music-button')) {
+            return;
+        }
         if (e.target.closest('button, a, .rsvp-box, .album-photo, .light-box')) {
             setIsPaused(true);
             return;
