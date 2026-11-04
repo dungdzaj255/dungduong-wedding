@@ -6,7 +6,7 @@
     "isWebview": false,
     "editorViewportWidth": 500,
     "width": 500,
-    "height": 6965
+    "height": 7010
   },
   "elements": [
     {
@@ -1457,6 +1457,7 @@
       "width": 500,
       "height": 337,
       "zIndex": 0,
+      "backgroundPosition": "center 52%",
       "props": {
         "backgroundColor": "transparent",
         "shadow": 0,
@@ -3368,7 +3369,7 @@
       "left": 0,
       "width": 500,
       "height": 360,
-      "backgroundPosition": "center 40%",
+      "backgroundPosition": "center 40.7%",
       "zIndex": 41,
       "props": {
         "backgroundColor": "transparent",
@@ -4557,7 +4558,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_thank_you"
+        "localImageUrl": "/images/album_3.jpg"
       }
     },
     {
@@ -4924,11 +4925,12 @@
     {
       "id": "iRy87S-vJp",
       "type": "PhotoBox",
-      "top": 6605,
+      "top": 6600,
       "left": 0,
       "width": 500,
-      "height": 366,
+      "height": 410,
       "zIndex": 0,
+      "backgroundPosition": "center 16%",
       "props": {
         "backgroundColor": "transparent",
         "shadow": 0,
@@ -4982,70 +4984,41 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/album_3.jpg"
+        "localImageUrl": "/images/anh_thank_you.jpg"
       }
     },
     {
-      "id": "dG254FA8ak",
+      "id": "thankyou_overlay",
       "type": "GeometricBox",
-      "top": 6750,
-      "left": 0,
-      "width": 500,
-      "height": 221,
-      "zIndex": 1,
+      "top": 6805,
+      "left": 10,
+      "width": 480,
+      "height": 200,
+      "zIndex": 5,
       "props": {
-        "zIndex": 1,
+        "zIndex": 5,
         "shapeType": "rectangle",
         "fill": "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.30) 100%)",
         "opacity": 1,
         "rotation": 0,
         "borderPosition": "all",
         "borderSize": 0,
-        "borderStyle": "solid",
-        "borderColor": "#d9d9d9",
+        "borderStyle": "none",
+        "borderColor": "transparent",
         "hasBoxShadow": false,
-        "boxShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 8,
-          "spread": 0,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "transition": {
-          "effectEnabled": false,
-          "effectType": "fadeIn",
-          "effectDuration": 2,
-          "effectDelay": 0.5,
-          "effectEasing": "ease"
-        },
-        "continuousAnimation": {
-          "type": "none",
-          "duration": 1,
-          "delay": 0.5
-        },
-        "top": 6750,
-        "left": 0,
-        "width": 500,
-        "height": 221,
-        "padding": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "borderRadius": [
-          0,
-          0,
-          0,
-          0
-        ],
+        "top": 6800,
+        "left": 10,
+        "width": 480,
+        "height": 220,
+        "padding": [0, 0, 0, 0],
+        "borderRadius": [12, 12, 12, 12],
         "scale": 1
       }
     },
     {
       "id": "7dN3KM6prr",
       "type": "TextBox",
-      "top": 6750,
+      "top": 6820,
       "left": -0.2,
       "width": 500,
       "height": "auto",
@@ -5054,10 +5027,9 @@
         "text": "<div>Thank you</div>",
         "fontFamily": "BucThu",
         "textAlign": "center",
-        "fontWeight": "normal",
         "textTransform": "none",
         "textDecoration": "none",
-        "color": "rgb(255, 255, 255)",
+        "color": "rgb(255, 248, 235)",
         "backgroundColor": "transparent",
         "shadow": 0,
         "opacity": 1,
@@ -5075,14 +5047,13 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "hasTextShadow": false,
+        "hasTextShadow": true,
         "textShadow": {
-          "offsetX": 0,
+          "offsetX": 1,
           "offsetY": 2,
-          "blur": 4,
-          "color": "rgba(0,0,0,0.25)"
+          "blur": 5,
+          "color": "rgba(0,0,0,0.65)"
         },
-        "zIndex": 11,
         "locked": false,
         "transition": {
           "effectEnabled": true,
@@ -5103,7 +5074,6 @@
         "left": -0.2,
         "width": 500,
         "height": "auto",
-        "fontSize": 56,
         "padding": [
           0,
           0,
@@ -5118,25 +5088,26 @@
         ],
         "letterSpacing": 0,
         "lineHeight": 1.2,
-        "scale": 1
+        "scale": 1,
+        "fontSize": 56,
+        "fontWeight": "normal",
+        "zIndex": 11
       }
     },
     {
       "id": "H-Hn6xsZEZ",
       "type": "TextBox",
-      "top": 6845,
+      "top": 6910,
       "left": 14.53,
       "width": 471,
       "height": 98,
       "zIndex": 41,
       "props": {
-        "text": "<div>Cảm ơn Quý Khách đã dành tình cảm cho gia đình chúng tôi! Sự hiện diện của Quý Khách chính là món quà ý nghĩa nhất, gia đình chúng tôi vô cùng trân quý khi được cùng Quý Khách chia sẻ niềm hạnh phúc trong ngày trọng đại này.</div>",
+        "text": "<div>Cảm ơn Quý Khách đã dành tình cảm cho gia đình chúng tôi!</br>Sự hiện diện của Quý Khách chính là món quà ý nghĩa nhất, gia đình chúng tôi vô cùng trân quý khi được cùng Quý Khách chia sẻ niềm hạnh phúc trong ngày trọng đại này.</div>",
         "fontFamily": "Lora Regular",
         "textAlign": "center",
-        "fontWeight": "normal",
         "textTransform": "none",
         "textDecoration": "none",
-        "color": "rgb(255, 255, 255)",
         "backgroundColor": "transparent",
         "shadow": 0,
         "opacity": 1,
@@ -5154,14 +5125,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "hasTextShadow": false,
-        "textShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 4,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "zIndex": 41,
         "locked": false,
         "transition": {
           "effectEnabled": true,
@@ -5182,7 +5145,6 @@
         "left": 14.53,
         "width": 471,
         "height": 98,
-        "fontSize": 16,
         "padding": [
           0,
           0,
@@ -5196,8 +5158,19 @@
           0
         ],
         "letterSpacing": 0,
+        "scale": 1,
+        "color": "rgb(255, 248, 235)",
+        "hasTextShadow": true,
+        "textShadow": {
+          "offsetX": 1,
+          "offsetY": 1,
+          "blur": 3,
+          "color": "rgba(0,0,0,0.75)"
+        },
+        "fontSize": 15,
+        "fontWeight": "normal",
         "lineHeight": 1.5,
-        "scale": 1
+        "zIndex": 41
       }
     }
   ]

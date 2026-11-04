@@ -114,10 +114,10 @@ export default function RsvpBox({
             Cảm ơn <strong>{fullName}</strong> ({guestSide}){' '}
             {willAttend === 'yes' ? (
               <span>
-                sẽ tham dự cùng <strong>{attendeeCount}</strong> người! Chúng mình rất mong chờ được đón tiếp bạn!
+                sẽ tham dự cùng <strong>{attendeeCount}</strong> người! Gia đình chúng tôi rất mong chờ được đón tiếp Quý Khách!
               </span>
             ) : (
-              <span>đã phản hồi lời mời của chúng mình! Chúc bạn nhiều sức khỏe và niềm vui!</span>
+              <span>đã phản hồi lời mời của gia đình! Chúc bạn nhiều sức khỏe và niềm vui!</span>
             )}
           </p>
           <button

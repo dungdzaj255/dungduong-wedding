@@ -284,6 +284,7 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       );
 
       const textStyle = {
+        textShadow: props.hasTextShadow ? props.textShadow : 'none',
         fontFamily: font,
         fontSize: `${props.fontSize || 16}px`,
         fontWeight: props.fontWeight || 'normal',
