@@ -251,7 +251,7 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
             ...animation.style,
             backgroundImage: `url("${imgSrc}")`,
             backgroundSize: 'cover',
-            backgroundPosition: '50% 50%',
+            backgroundPosition: el.backgroundPosition || '50% 50%',
             backgroundRepeat: 'no-repeat',
             borderRadius: radius,
             opacity: props.opacity ?? 1,
@@ -361,7 +361,7 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
   };
 
   const canvasWidth = pageData.meta.width || 500;
-  const canvasHeight = pageData.meta.height || 7017;
+  const canvasHeight = pageData.meta.height || 6965;
   const scaledWidth = canvasWidth * scale;
   const scaledHeight = canvasHeight * scale;
 

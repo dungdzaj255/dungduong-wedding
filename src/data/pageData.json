@@ -6,7 +6,7 @@
     "isWebview": false,
     "editorViewportWidth": 500,
     "width": 500,
-    "height": 7017
+    "height": 6965
   },
   "elements": [
     {
@@ -36,7 +36,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDU5MjJfMTc5MzU0ODc1MzE0NV84cWxzbHdpeGo0OQ.jpg?crop=0,265,1216,1559",
         "alt": "",
         "zIndex": 65,
         "locked": false,
@@ -72,8 +71,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_thiep.jpg",
-        "originalImgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDU5MjJfMTc5MzU0ODc1MzE0NV84cWxzbHdpeGo0OQ.jpg?crop=0,265,1216,1559"
+        "localImageUrl": "/images/anh_thiep.jpg"
       }
     },
     {
@@ -103,7 +101,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtM18xNzgyMTAyNDQwX2V4Zg.png",
         "alt": "",
         "zIndex": 67,
         "locked": false,
@@ -137,8 +134,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/flower_1.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtM18xNzgyMTAyNDQwX2V4Zg.png"
+        "localImageUrl": "/images/flower_1.png"
       }
     },
     {
@@ -168,7 +164,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMTFfMTc4MjEwMjQ0MV8wODU.png",
         "alt": "",
         "zIndex": 0,
         "locked": false,
@@ -202,8 +197,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/thiep_1.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMTFfMTc4MjEwMjQ0MV8wODU.png"
+        "localImageUrl": "/images/thiep_1.png"
       }
     },
     {
@@ -233,7 +227,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMThfMTc4MjEwMjQ0MV9kM2E.png",
         "alt": "",
         "zIndex": 68,
         "locked": false,
@@ -267,8 +260,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/flower_2.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMThfMTc4MjEwMjQ0MV9kM2E.png"
+        "localImageUrl": "/images/flower_2.png"
       }
     },
     {
@@ -298,7 +290,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMTZfMTc4MjEwMjQ0MV9lcWY.png?crop=75,287,655,479",
         "alt": "",
         "zIndex": 66,
         "locked": false,
@@ -332,8 +323,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/thiep_2.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMTZfMTc4MjEwMjQ0MV9lcWY.png?crop=75,287,655,479"
+        "localImageUrl": "/images/thiep_2.png"
       }
     },
     {
@@ -363,7 +353,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMTBfMTc4MjEwMjQ0MV8zdzg.png?crop=220,226,338,338",
         "alt": "",
         "zIndex": 73,
         "locked": false,
@@ -397,8 +386,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/letter_wax.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMTBfMTc4MjEwMjQ0MV8zdzg.png?crop=220,226,338,338"
+        "localImageUrl": "/images/letter_wax.png"
       }
     },
     {
@@ -428,7 +416,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMjFfMTc4MjEwMjQ0MV9iODI.png?crop=154,70,503,664",
         "alt": "",
         "zIndex": 69,
         "locked": false,
@@ -462,8 +449,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/name_board.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMjFfMTc4MjEwMjQ0MV9iODI.png?crop=154,70,503,664"
+        "localImageUrl": "/images/name_board.png"
       }
     },
     {
@@ -493,7 +479,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMTRfMTc4MjEwMjQ0MV8yMmk.png",
         "alt": "",
         "zIndex": 70,
         "locked": false,
@@ -527,8 +512,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/flower_3.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMTRfMTc4MjEwMjQ0MV8yMmk.png"
+        "localImageUrl": "/images/flower_3.png"
       }
     },
     {
@@ -637,7 +621,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtM18xNzgyMTAyNDQwX2V4Zg.png",
         "alt": "",
         "zIndex": 96,
         "locked": false,
@@ -671,8 +654,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/flower_1.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtM18xNzgyMTAyNDQwX2V4Zg.png"
+        "localImageUrl": "/images/flower_1.png"
       }
     },
     {
@@ -843,7 +825,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDYzNjBfMTc5MzU1MDMwNzc3NV83bDluMm5seGRrbA.jpg",
         "alt": "",
         "zIndex": 0,
         "locked": false,
@@ -879,8 +860,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_chu_re.jpg",
-        "originalImgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDYzNjBfMTc5MzU1MDMwNzc3NV83bDluMm5seGRrbA.jpg"
+        "localImageUrl": "/images/anh_chu_re.jpg"
       }
     },
     {
@@ -1068,7 +1048,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDYyMjZfMTc5MzU1MDMwNzE0OF90MGVoZnppbmo1.jpg?crop=0,27,1216,1797",
         "alt": "",
         "zIndex": 0,
         "locked": false,
@@ -1104,8 +1083,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_co_dau.jpg",
-        "originalImgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDYyMjZfMTc5MzU1MDMwNzE0OF90MGVoZnppbmo1.jpg?crop=0,27,1216,1797"
+        "localImageUrl": "/images/anh_co_dau.jpg"
       }
     },
     {
@@ -1135,7 +1113,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtM18xNzgyMTAyNDQwX2V4Zg.png",
         "alt": "",
         "zIndex": 74,
         "locked": false,
@@ -1169,8 +1146,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/flower_1.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtM18xNzgyMTAyNDQwX2V4Zg.png"
+        "localImageUrl": "/images/flower_1.png"
       }
     },
     {
@@ -1200,7 +1176,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtOV8xNzgyMTAyNDQxXzA1YQ.png",
         "alt": "",
         "zIndex": 77,
         "locked": false,
@@ -1234,8 +1209,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/flower_5.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtOV8xNzgyMTAyNDQxXzA1YQ.png"
+        "localImageUrl": "/images/flower_5.png"
       }
     },
     {
@@ -1405,7 +1379,7 @@
       "height": 220,
       "zIndex": 6,
       "props": {
-        "text": "<div>Từ Tri Kỷ Niên Thiếu</div><div>Đến Trọn Kiếp Đồng Tâm</div>",
+        "text": "<div>TWO SOULS, ONE HEART,</div><div>A LIFETIME TOGETHER</div>",
         "fontFamily": "Lora Regular",
         "textAlign": "center",
         "fontWeight": "normal",
@@ -1502,7 +1476,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDY1NDVfMTc5MzU1MDUzMTgzNl80Zm0yMGQ4ZHA3bw.jpg?crop=4,559,1212,909",
         "alt": "",
         "zIndex": 0,
         "locked": false,
@@ -1538,8 +1511,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_just_married.jpg",
-        "originalImgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDY1NDVfMTc5MzU1MDUzMTgzNl80Zm0yMGQ4ZHA3bw.jpg?crop=4,559,1212,909"
+        "localImageUrl": "/images/anh_just_married.jpg"
       }
     },
     {
@@ -2082,7 +2054,7 @@
       "height": 24,
       "zIndex": 13,
       "props": {
-        "text": "<p>Ông: Lê Hải Mạnh</p><p>Bà: Nguyễn Minh Hiếu</p><p>TP. Hà Nội</p>",
+        "text": "<p>Bà: Nguyễn Minh Hiếu</p><p></br></p><p>TP. Hà Nội</p>",
         "fontFamily": "Libre Baskerville",
         "textAlign": "center",
         "fontWeight": "normal",
@@ -3308,6 +3280,7 @@
       "left": 0,
       "width": 500,
       "height": 360,
+      "backgroundPosition": "center 40%",
       "zIndex": 41,
       "props": {
         "backgroundColor": "transparent",
@@ -3328,7 +3301,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDU5NzFfMTc5MzU1MzI3OTE3N184a3dmMjVhczU4cg.jpg?crop=0,333,1216,912",
         "alt": "",
         "zIndex": 41,
         "locked": false,
@@ -3352,7 +3324,7 @@
         "width": 500,
         "height": 331,
         "padding": [
-          10,
+          0,
           0,
           0,
           0
@@ -3364,8 +3336,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_our_love_0.jpg",
-        "originalImgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDU5NzFfMTc5MzU1MzI3OTE3N184a3dmMjVhczU4cg.jpg?crop=0,333,1216,912"
+        "localImageUrl": "/images/anh_our_love_0.jpg"
       }
     },
     {
@@ -3474,7 +3445,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDY0NjFfMTc5MzU1MzE4OTMxNV9wOHFxOTVidGsybQ.jpg",
         "alt": "",
         "zIndex": 84,
         "locked": false,
@@ -3510,8 +3480,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_our_love_1.jpg",
-        "originalImgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDY0NjFfMTc5MzU1MzE4OTMxNV9wOHFxOTVidGsybQ.jpg"
+        "localImageUrl": "/images/anh_our_love_1.jpg"
       }
     },
     {
@@ -3541,7 +3510,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDY1MzdfMTc5MzU1MzM5MDgyNl9xNGNuemJ6cDR3cw.jpg",
         "alt": "",
         "zIndex": 85,
         "locked": false,
@@ -3577,8 +3545,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_our_love_2.jpg",
-        "originalImgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDY1MzdfMTc5MzU1MzM5MDgyNl9xNGNuemJ6cDR3cw.jpg"
+        "localImageUrl": "/images/anh_our_love_2.jpg"
       }
     },
     {
@@ -3608,7 +3575,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDU4MTBfMTc5MzU1MzM5MDcyOV9wNWpxNDFoend0.jpg",
         "alt": "",
         "zIndex": 86,
         "locked": false,
@@ -3644,31 +3610,30 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_our_love_3.jpg",
-        "originalImgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDU4MTBfMTc5MzU1MzM5MDcyOV9wNWpxNDFoend0.jpg"
+        "localImageUrl": "/images/anh_our_love_3.jpg"
       }
     },
     {
       "id": "vFU02s3z87",
       "type": "TextBox",
-      "top": 4140.7,
+      "top": 4145,
       "left": 8.72,
       "width": 483,
       "height": 98,
       "zIndex": 26,
       "props": {
-        "text": "<div>Mỗi câu chuyện tình yêu đều có một hành trình riêng. Sau những ngày tháng cùng nhau trưởng thành, chúng tôi quyết định về chung một nhà và viết tiếp câu chuyện ấy bằng tình yêu, sự tin tưởng và hạnh phúc.</div>",
-        "fontFamily": "Signature",
+        "text": "<div>forever begins today</div>",
+        "fontFamily": "Lora Regular",
         "textAlign": "center",
         "fontWeight": "normal",
-        "textTransform": "none",
+        "textTransform": "uppercase",
         "textDecoration": "none",
         "color": "#000624",
         "backgroundColor": "transparent",
         "shadow": 0,
         "opacity": 1,
         "rotation": 0,
-        "fontStyle": "normal",
+        "fontStyle": "italic",
         "borderPosition": "all",
         "borderSize": 1,
         "borderStyle": "none",
@@ -3705,11 +3670,11 @@
         },
         "curve": 0,
         "eventType": "none",
-        "top": 4140.7,
+        "top": 4145,
         "left": 8.72,
         "width": 483,
         "height": 98,
-        "fontSize": 16,
+        "fontSize": 22,
         "padding": [
           0,
           0,
@@ -3722,7 +3687,7 @@
           0,
           0
         ],
-        "letterSpacing": 0,
+        "letterSpacing": 0.5,
         "lineHeight": 1.5,
         "scale": 1
       }
@@ -3730,8 +3695,8 @@
     {
       "id": "wOo85asXd8",
       "type": "PhotoBox",
-      "top": 4238.24,
-      "left": 258.59,
+      "top": 4204,
+      "left": 258.6,
       "width": 81,
       "height": 214,
       "zIndex": 0,
@@ -3754,7 +3719,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtM18xNzgyMTAyNDQwX2V4Zg.png",
         "alt": "",
         "zIndex": 0,
         "locked": false,
@@ -3771,8 +3735,8 @@
           "duration": 1.5,
           "delay": 0.5
         },
-        "top": 4238.24,
-        "left": 258.59,
+        "top": 4204,
+        "left": 258.6,
         "width": 81,
         "height": 214,
         "padding": [
@@ -3788,14 +3752,13 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/flower_1.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtM18xNzgyMTAyNDQwX2V4Zg.png"
+        "localImageUrl": "/images/flower_1.png"
       }
     },
     {
       "id": "-8ru4BddPI",
       "type": "LineBox",
-      "top": 4284.88,
+      "top": 4255,
       "left": 215.12,
       "width": 70,
       "height": 2,
@@ -3821,7 +3784,7 @@
         },
         "borderSize": 1,
         "borderPosition": "all",
-        "top": 4284.88,
+        "top": 4255,
         "left": 215.12,
         "width": 70,
         "height": 2,
@@ -3843,7 +3806,7 @@
     {
       "id": "Q2N235ewq3",
       "type": "PhotoBox",
-      "top": 4305.23,
+      "top": 4270,
       "left": 0,
       "width": 122,
       "height": 215,
@@ -3867,7 +3830,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtNF8xNzgyMTAyNDQxXzVjMw.png",
         "alt": "",
         "zIndex": 98,
         "locked": false,
@@ -3884,7 +3846,7 @@
           "duration": 1.5,
           "delay": 0.5
         },
-        "top": 4305.23,
+        "top": 4270,
         "left": 0,
         "width": 122,
         "height": 215,
@@ -3901,17 +3863,16 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/flower_4.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtNF8xNzgyMTAyNDQxXzVjMw.png"
+        "localImageUrl": "/images/flower_4.png"
       }
     },
     {
       "id": "-OciBIPeaE",
       "type": "PhotoBox",
-      "top": 4354.65,
-      "left": 215.12,
-      "width": 70,
-      "height": 70,
+      "top": 4280,
+      "left": 178,
+      "width": 150,
+      "height": 150,
       "zIndex": 93,
       "props": {
         "backgroundColor": "transparent",
@@ -3932,7 +3893,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMTBfMTc4MjEwMjQ0MV8zdzg.png?crop=220,226,338,338",
         "alt": "",
         "zIndex": 93,
         "locked": false,
@@ -3949,7 +3909,7 @@
           "duration": 1.5,
           "delay": 0.5
         },
-        "top": 4354.65,
+        "top": 4280,
         "left": 215.12,
         "width": 70,
         "height": 70,
@@ -3966,17 +3926,16 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/letter_wax.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtMTBfMTc4MjEwMjQ0MV8zdzg.png?crop=220,226,338,338"
+        "localImageUrl": "/images/letter_wax.png"
       }
     },
     {
       "id": "KzpYDELGin",
       "type": "GeometricBox",
-      "top": 4389.53,
+      "top": 4355,
       "left": 63.95,
       "width": 372,
-      "height": 419,
+      "height": 380,
       "zIndex": 0,
       "props": {
         "zIndex": 0,
@@ -4008,7 +3967,7 @@
           "duration": 1,
           "delay": 0.5
         },
-        "top": 4389.53,
+        "top": 4355,
         "left": 63.95,
         "width": 372,
         "height": 419,
@@ -4028,88 +3987,9 @@
       }
     },
     {
-      "id": "U4J5cCASax",
-      "type": "TextBox",
-      "top": 4419.77,
-      "left": 0,
-      "width": 500,
-      "height": "auto",
-      "zIndex": 38,
-      "props": {
-        "text": "<div>đám cưới của chúng mình</div>diễn ra vào",
-        "fontFamily": "Lora Regular",
-        "textAlign": "center",
-        "fontWeight": "normal",
-        "textTransform": "uppercase",
-        "textDecoration": "none",
-        "color": "rgb(255, 255, 255)",
-        "backgroundColor": "transparent",
-        "shadow": 0,
-        "opacity": 1,
-        "rotation": 0,
-        "fontStyle": "normal",
-        "borderPosition": "all",
-        "borderSize": 1,
-        "borderStyle": "none",
-        "borderColor": "#000000",
-        "hasBoxShadow": false,
-        "boxShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 8,
-          "spread": 0,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "hasTextShadow": false,
-        "textShadow": {
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 4,
-          "color": "rgba(0,0,0,0.25)"
-        },
-        "zIndex": 38,
-        "locked": false,
-        "transition": {
-          "effectEnabled": true,
-          "effectType": "fadeInRight",
-          "effectDuration": 2,
-          "effectDelay": 0.5,
-          "effectEasing": "ease"
-        },
-        "hyperlink": "",
-        "continuousAnimation": {
-          "type": "none",
-          "duration": 1.5,
-          "delay": 0.5
-        },
-        "curve": 0,
-        "eventType": "none",
-        "top": 4419.77,
-        "left": 0,
-        "width": 500,
-        "height": "auto",
-        "fontSize": 19,
-        "padding": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "borderRadius": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "letterSpacing": 0,
-        "lineHeight": 1.5,
-        "scale": 1
-      }
-    },
-    {
       "id": "imNSaiO7-y",
       "type": "TextBox",
-      "top": 4477.44,
+      "top": 4390,
       "left": -0.9,
       "width": 500,
       "height": "auto",
@@ -4163,7 +4043,7 @@
         },
         "curve": 0,
         "eventType": "none",
-        "top": 4477.44,
+        "top": 4390,
         "left": -0.9,
         "width": 500,
         "height": "auto",
@@ -4188,7 +4068,7 @@
     {
       "id": "DU2NhnW3ed",
       "type": "CalendarBoxV2",
-      "top": 4548.07,
+      "top": 4473,
       "left": 70.35,
       "width": 359.1,
       "height": 253.24,
@@ -4233,7 +4113,7 @@
           "kind": "default",
           "presetId": "circle-outline"
         },
-        "top": 4548.07,
+        "top": 4473,
         "left": 70.35,
         "width": 359.1,
         "height": 253.24,
@@ -4256,7 +4136,7 @@
     {
       "id": "FfNlbGDcqG",
       "type": "PhotoBox",
-      "top": 4688.37,
+      "top": 4625,
       "left": 377.91,
       "width": 122,
       "height": 219,
@@ -4280,7 +4160,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtNF8xNzgyMTAyNDQxXzVjMw.png",
         "alt": "",
         "zIndex": 95,
         "locked": false,
@@ -4297,7 +4176,7 @@
           "duration": 1.5,
           "delay": 0.5
         },
-        "top": 4688.37,
+        "top": 4625,
         "left": 377.91,
         "width": 122,
         "height": 219,
@@ -4314,14 +4193,13 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/flower_4.png",
-        "originalImgKey": "/templates/d69badd9-6cdf-41ae-b6cc-31f1abedd3fc/images/aW1hZ2UtNF8xNzgyMTAyNDQxXzVjMw.png"
+        "localImageUrl": "/images/flower_4.png"
       }
     },
     {
       "id": "VN-NOXhkkj",
       "type": "TextBox",
-      "top": 4889.07,
+      "top": 4840,
       "left": 0,
       "width": 500,
       "height": "auto",
@@ -4375,11 +4253,11 @@
         },
         "curve": 0,
         "eventType": "none",
-        "top": 4889.07,
+        "top": 4840,
         "left": 0,
         "width": 500,
         "height": "auto",
-        "fontSize": 74,
+          "fontSize": 72,
         "padding": [
           0,
           0,
@@ -4400,7 +4278,7 @@
     {
       "id": "XLbd5vWc6e",
       "type": "PhotoBox",
-      "top": 4988.37,
+      "top": 4940,
       "left": 11.63,
       "width": 233,
       "height": 349,
@@ -4424,7 +4302,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDc0MjlfMTc5MzU1MzAzNzgwMl8wY2ZtdG1tcTk3ZXE.jpg",
         "alt": "",
         "zIndex": 52,
         "locked": false,
@@ -4443,7 +4320,7 @@
         },
         "isReplaceable": true,
         "previewKey": 1,
-        "top": 4988.37,
+        "top": 4940,
         "left": 11.63,
         "width": 233,
         "height": 349,
@@ -4460,14 +4337,13 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/album_1.jpg",
-        "originalImgKey": "uploads/acf5c856-ee0c-46d3-831c-bf62aaecfeb7/SEFJMDc0MjlfMTc5MzU1MzAzNzgwMl8wY2ZtdG1tcTk3ZXE.jpg"
+        "localImageUrl": "/images/album_1.jpg"
       }
     },
     {
       "id": "03mmnniHWa",
       "type": "PhotoBox",
-      "top": 4988.37,
+      "top": 4940,
       "left": 255.81,
       "width": 233,
       "height": 349,
@@ -4491,7 +4367,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtMjV3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NzUxXzZ3aHVuMWg5anVy.jpg",
         "alt": "",
         "zIndex": 53,
         "locked": false,
@@ -4509,7 +4384,7 @@
           "delay": 0.5
         },
         "isReplaceable": true,
-        "top": 4988.37,
+        "top": 4940,
         "left": 255.81,
         "width": 233,
         "height": 349,
@@ -4526,14 +4401,13 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/album_2.jpg",
-        "originalImgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtMjV3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NzUxXzZ3aHVuMWg5anVy.jpg"
+        "localImageUrl": "/images/album_2.jpg"
       }
     },
     {
       "id": "Q1YmzXFFjL",
       "type": "PhotoBox",
-      "top": 5348.84,
+      "top": 5300,
       "left": 11.63,
       "width": 233,
       "height": 349,
@@ -4557,7 +4431,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtNDB3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NzMxX2s4c2h5Mm9lY3I.jpg",
         "alt": "",
         "zIndex": 52,
         "locked": false,
@@ -4576,7 +4449,7 @@
         },
         "previewKey": 1,
         "isReplaceable": true,
-        "top": 5348.84,
+        "top": 5300,
         "left": 11.63,
         "width": 233,
         "height": 349,
@@ -4593,14 +4466,13 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_thank_you",
-        "originalImgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtNDB3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NzMxX2s4c2h5Mm9lY3I.jpg"
+        "localImageUrl": "/images/anh_thank_you"
       }
     },
     {
       "id": "g5IV5uiGLc",
       "type": "PhotoBox",
-      "top": 5348.84,
+      "top": 5300,
       "left": 255.81,
       "width": 233,
       "height": 349,
@@ -4624,7 +4496,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtMjh3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NjQwX2x0dWdwMGh2bTZx.jpg",
         "alt": "",
         "zIndex": 53,
         "locked": false,
@@ -4642,7 +4513,7 @@
           "delay": 0.5
         },
         "isReplaceable": true,
-        "top": 5348.84,
+        "top": 5300,
         "left": 255.81,
         "width": 233,
         "height": 349,
@@ -4659,14 +4530,13 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/album_4.jpg",
-        "originalImgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtMjh3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NjQwX2x0dWdwMGh2bTZx.jpg"
+        "localImageUrl": "/images/album_4.jpg"
       }
     },
     {
       "id": "ypuPzT_Oc4",
       "type": "PhotoBox",
-      "top": 5709.3,
+      "top": 5660,
       "left": 11.63,
       "width": 233,
       "height": 349,
@@ -4690,7 +4560,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtNDV3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NzM3X3BvMmlwOTB0YjE.jpg",
         "alt": "",
         "zIndex": 52,
         "locked": false,
@@ -4708,7 +4577,7 @@
           "delay": 0.5
         },
         "isReplaceable": true,
-        "top": 5709.3,
+        "top": 5660,
         "left": 11.63,
         "width": 233,
         "height": 349,
@@ -4725,14 +4594,13 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/album_5.jpg",
-        "originalImgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtNDV3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NzM3X3BvMmlwOTB0YjE.jpg"
+        "localImageUrl": "/images/album_5.jpg"
       }
     },
     {
       "id": "F03liH8_uX",
       "type": "PhotoBox",
-      "top": 5709.3,
+      "top": 5660,
       "left": 255.81,
       "width": 233,
       "height": 349,
@@ -4756,7 +4624,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtMjV3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NzUxXzZ3aHVuMWg5anVy.jpg",
         "alt": "",
         "zIndex": 53,
         "locked": false,
@@ -4774,7 +4641,7 @@
           "delay": 0.5
         },
         "isReplaceable": true,
-        "top": 5709.3,
+        "top": 5660,
         "left": 255.81,
         "width": 233,
         "height": 349,
@@ -4791,14 +4658,13 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/album_6.jpg",
-        "originalImgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtMjV3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NzUxXzZ3aHVuMWg5anVy.jpg"
+        "localImageUrl": "/images/album_6.jpg"
       }
     },
     {
       "id": "UMhVqnCR3q",
       "type": "RsvpBoxV2",
-      "top": 6068.38,
+      "top": 6025,
       "left": 30,
       "width": 442.4,
       "height": 605.52,
@@ -4862,7 +4728,7 @@
           "effectDelay": 0,
           "effectEasing": "ease"
         },
-        "top": 6068.38,
+        "top": 6025,
         "left": 30,
         "width": 442.4,
         "height": 605.52,
@@ -4964,7 +4830,7 @@
     {
       "id": "iRy87S-vJp",
       "type": "PhotoBox",
-      "top": 6653.49,
+      "top": 6605,
       "left": 0,
       "width": 500,
       "height": 366,
@@ -4988,7 +4854,6 @@
           "spread": 0,
           "color": "rgba(0,0,0,0.25)"
         },
-        "imgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtNDB3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NzMxX2s4c2h5Mm9lY3I.jpg",
         "alt": "",
         "zIndex": 0,
         "locked": false,
@@ -5006,7 +4871,7 @@
           "delay": 0.5
         },
         "isReplaceable": true,
-        "top": 6653.49,
+        "top": 6605,
         "left": 0,
         "width": 500,
         "height": 366,
@@ -5023,14 +4888,13 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/album_3.jpg",
-        "originalImgKey": "uploads/20ebff90-ba33-4679-b427-52cdb622de1e/trong-nha-3-cuoi/aW1hZ2UtNDB3YXRlcm1hcmtlZF8xNzgwNjA5NTQ0NzMxX2s4c2h5Mm9lY3I.jpg"
+        "localImageUrl": "/images/album_3.jpg"
       }
     },
     {
       "id": "dG254FA8ak",
       "type": "GeometricBox",
-      "top": 6798.84,
+      "top": 6750,
       "left": 0,
       "width": 500,
       "height": 221,
@@ -5065,7 +4929,7 @@
           "duration": 1,
           "delay": 0.5
         },
-        "top": 6798.84,
+        "top": 6750,
         "left": 0,
         "width": 500,
         "height": 221,
@@ -5087,7 +4951,7 @@
     {
       "id": "7dN3KM6prr",
       "type": "TextBox",
-      "top": 6809.98,
+      "top": 6750,
       "left": -0.2,
       "width": 500,
       "height": "auto",
@@ -5141,7 +5005,7 @@
         },
         "curve": 0,
         "eventType": "none",
-        "top": 6809.98,
+        "top": 6750,
         "left": -0.2,
         "width": 500,
         "height": "auto",
@@ -5166,7 +5030,7 @@
     {
       "id": "H-Hn6xsZEZ",
       "type": "TextBox",
-      "top": 6890.72,
+      "top": 6845,
       "left": 14.53,
       "width": 471,
       "height": 98,
@@ -5220,7 +5084,7 @@
         },
         "curve": 0,
         "eventType": "none",
-        "top": 6890.72,
+        "top": 6845,
         "left": 14.53,
         "width": 471,
         "height": 98,
