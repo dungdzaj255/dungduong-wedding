@@ -29,8 +29,19 @@ export default function App() {
 
                 const nextPos = window.scrollY + stepPx;
 
+                if (nextPos >= maxScroll) {
+                    window.scrollTo({
+                        top: maxScroll,
+                        behavior: 'auto'
+                    });
+
+                    clearInterval(timer);
+                    timer = null;
+                    return;
+                }
+
                 window.scrollTo({
-                    top: nextPos >= maxScroll ? 0 : nextPos,
+                    top: nextPos,
                     behavior: 'auto'
                 });
             }, intervalMs);
