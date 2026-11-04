@@ -4294,7 +4294,7 @@
         "borderSize": 0,
         "borderStyle": "solid",
         "borderColor": "#d9d9d9",
-        "hasBoxShadow": false,
+        "hasBoxShadow": true,
         "boxShadow": {
           "offsetX": 0,
           "offsetY": 2,
@@ -4359,7 +4359,7 @@
         "borderSize": 0,
         "borderStyle": "solid",
         "borderColor": "#d9d9d9",
-        "hasBoxShadow": false,
+        "hasBoxShadow": true,
         "boxShadow": {
           "offsetX": 0,
           "offsetY": 2,
@@ -4488,7 +4488,7 @@
         "borderSize": 0,
         "borderStyle": "solid",
         "borderColor": "#d9d9d9",
-        "hasBoxShadow": false,
+        "hasBoxShadow": true,
         "boxShadow": {
           "offsetX": 0,
           "offsetY": 2,
@@ -4552,7 +4552,7 @@
         "borderSize": 0,
         "borderStyle": "solid",
         "borderColor": "#d9d9d9",
-        "hasBoxShadow": false,
+        "hasBoxShadow": true,
         "boxShadow": {
           "offsetX": 0,
           "offsetY": 2,
@@ -4616,7 +4616,7 @@
         "borderSize": 0,
         "borderStyle": "solid",
         "borderColor": "#d9d9d9",
-        "hasBoxShadow": false,
+        "hasBoxShadow": true,
         "boxShadow": {
           "offsetX": 0,
           "offsetY": 2,
