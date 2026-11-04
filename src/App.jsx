@@ -127,8 +127,15 @@ export default function App() {
       <MusicPlayer src="/music.mp3" title="Beautiful Girl" />
 
       {/* Main Full Page Viewer */}
-      <main style={{ width: '100%', position: 'relative' }}>
-        <FullPageViewer viewMode={viewMode} />
+      <main
+          style={{
+              width: '100%',
+              maxWidth: '100vw',
+              position: 'relative',
+              overflowX: 'hidden'
+          }}
+      >
+          <FullPageViewer viewMode={viewMode} />
       </main>
 
       {/* Floating Action Buttons */}

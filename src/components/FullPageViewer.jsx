@@ -27,26 +27,30 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
     .map(el => el.props.localImageUrl);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (!containerRef.current) return;
+    if (!containerRef.current) return;
 
-      let targetWidth = window.innerWidth;
+    const handleResize = () => {
+      const containerWidth = containerRef.current.clientWidth;
+
+      let targetWidth = containerWidth;
 
       if (viewMode === 'mobile') {
-        targetWidth = Math.min(390, window.innerWidth);
+        targetWidth = Math.min(390, containerWidth);
       } else if (viewMode === 'full') {
         targetWidth = 500;
       } else {
-        targetWidth = Math.min(500, window.innerWidth);
+        targetWidth = Math.min(500, containerWidth);
       }
 
       setScale(targetWidth / 500);
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    const observer = new ResizeObserver(handleResize);
+    observer.observe(containerRef.current);
+
+    return () => observer.disconnect();
   }, [viewMode]);
 
   const getBorderStyle = (borderPosition, size, style, color) => {

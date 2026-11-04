@@ -1,3 +1,19 @@
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'BucThu';
   src: url('/fonts/signature.woff2') format('woff2'),
