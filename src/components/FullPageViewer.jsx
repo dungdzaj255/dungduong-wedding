@@ -6,25 +6,82 @@ import CalendarBox from './CalendarBox';
 import RsvpBox from './RsvpBox';
 import Lightbox from './Lightbox';
 
-export default function FullPageViewer({ viewMode = 'responsive' }) {
+export default function FullPageViewer({
+                                         viewMode = 'responsive',
+                                         onImagesLoaded
+                                       }) {
   const inViewRef = useInViewAnimation();
   const containerRef = useRef(null);
   const [scale, setScale] = useState(1);
   const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   const galleryPhotoIds = [
-    'XLbd5vWc6e',
-    '03mmnniHWa',
-    'Q1YmzXFFjL',
-    'g5IV5uiGLc',
-    'ypuPzT_Oc4',
-    'F03liH8_uX'
+    'album-1',
+    'album-2',
+    'album-3',
+    'album-4',
+    'album-5',
+    'album-6'
   ];
 
   const galleryImages = galleryPhotoIds
-    .map(id => pageData.elements.find(el => el.id === id))
-    .filter(Boolean)
-    .map(el => el.props.localImageUrl);
+      .map(id => pageData.elements.find(el => el.id === id))
+      .filter(Boolean)
+      .map(el => el.props.localImageUrl);
+
+  const imageUrls = [
+    ...new Set(
+        pageData.elements
+            .filter(el => el.type === 'PhotoBox')
+            .map(el => el.props?.localImageUrl)
+            .filter(Boolean)
+    )
+  ];
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const preloadImages = async () => {
+      const batchSize = 3;
+
+      for (let i = 0; i < imageUrls.length; i += batchSize) {
+        const batch = imageUrls.slice(i, i + batchSize);
+
+        await Promise.all(
+            batch.map(src => new Promise(resolve => {
+              const img = new Image();
+
+              img.onload = resolve;
+              img.onerror = resolve;
+              img.src = src;
+
+              if (img.complete) resolve();
+            }))
+        );
+
+        if (cancelled) return;
+      }
+
+      if (!cancelled) {
+        setImagesLoaded(true);
+      }
+    };
+
+    if (imageUrls.length === 0) {
+      setImagesLoaded(true);
+    } else {
+      preloadImages();
+    }
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    onImagesLoaded?.(imagesLoaded);
+  }, [imagesLoaded, onImagesLoaded]);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -83,22 +140,22 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
     const transition = el.transition ?? el.props?.transition;
 
     const enabled =
-      transition?.effectEnabled &&
-      transition?.effectType &&
-      transition.effectType !== 'none';
+        transition?.effectEnabled &&
+        transition?.effectType &&
+        transition.effectType !== 'none';
 
     return {
       ref: inViewRef(el.id, transition),
       className: enabled
-        ? `scroll-reveal animate-${transition.effectType}`
-        : undefined,
+          ? `scroll-reveal animate-${transition.effectType}`
+          : undefined,
       style: enabled
-        ? {
-          '--reveal-duration': `${transition.effectDuration ?? 1}s`,
-          '--reveal-delay': `${transition.effectDelay ?? 0}s`,
-          '--reveal-easing': transition.effectEasing || 'ease'
-        }
-        : {}
+          ? {
+            '--reveal-duration': `${transition.effectDuration ?? 1}s`,
+            '--reveal-delay': `${transition.effectDelay ?? 0}s`,
+            '--reveal-easing': transition.effectEasing || 'ease'
+          }
+          : {}
     };
   };
 
@@ -119,100 +176,94 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
 
     const animation = getAnimationProps(el);
 
-    // 1. COUNTDOWN BOX
     if (type === 'CountdownBoxV2') {
       return (
-        <div
-          key={id}
-          ref={animation.ref}
-          className={animation.className}
-          style={{ ...baseStyle, ...animation.style }}
-        >
-          <CountdownBox targetDate="2026-11-29T17:30:00+07:00" />
-        </div>
+          <div
+              key={id}
+              ref={animation.ref}
+              className={animation.className}
+              style={{ ...baseStyle, ...animation.style }}
+          >
+            <CountdownBox targetDate="2026-11-29T17:30:00+07:00" />
+          </div>
       );
     }
 
-    // 2. CALENDAR BOX
     if (type === 'CalendarBoxV2') {
       return (
-        <div
-          key={id}
-          ref={animation.ref}
-          className={animation.className}
-          style={{ ...baseStyle, ...animation.style }}
-        >
-          <CalendarBox selectedDay={29} month={11} year={2026} />
-        </div>
+          <div
+              key={id}
+              ref={animation.ref}
+              className={animation.className}
+              style={{ ...baseStyle, ...animation.style }}
+          >
+            <CalendarBox selectedDay={29} month={11} year={2026} />
+          </div>
       );
     }
 
-    // 3. RSVP BOX
     if (type === 'RsvpBoxV2') {
       return (
-        <div
-          key={id}
-          id="rsvp-section"
-          ref={animation.ref}
-          className={animation.className}
-          style={{ ...baseStyle, ...animation.style }}
-        >
-          <RsvpBox
-            titleText={props.titleText || 'Xác nhận tham dự'}
-            subtitleText="Hãy xác nhận sự có mặt của Quý Khách để gia đình chúng tôi chuẩn bị đón tiếp chu đáo nhất!"
-            buttonColor={props.buttonColor || '#5D041E'}
-            buttonTextColor={props.buttonTextColor || '#ffffff'}
-          />
-        </div>
+          <div
+              key={id}
+              id="rsvp-section"
+              ref={animation.ref}
+              className={animation.className}
+              style={{ ...baseStyle, ...animation.style }}
+          >
+            <RsvpBox
+                titleText={props.titleText || 'Xác nhận tham dự'}
+                subtitleText="Hãy xác nhận sự có mặt của Quý Khách để gia đình chúng tôi chuẩn bị đón tiếp chu đáo nhất!"
+                buttonColor={props.buttonColor || '#5D041E'}
+                buttonTextColor={props.buttonTextColor || '#ffffff'}
+            />
+          </div>
       );
     }
 
-    // 4. GEOMETRIC BOX
     if (type === 'GeometricBox') {
       const radius = props.borderRadius ? `${props.borderRadius[0]}px` : '0px';
       const isCard = id === '2CxL6I5WMt' || id === '9nTWaf4Zlg';
 
       return (
-        <div
-          key={id}
-          ref={animation.ref}
-          className={animation.className}
-          style={{
-            ...baseStyle,
-            ...animation.style,
-            background: props.fill || '#5D041E',
-            borderRadius: radius,
-            opacity: props.opacity ?? 1,
-            boxShadow: isCard
-              ? '0 12px 36px rgba(93, 4, 30, 0.28)'
-              : props.hasBoxShadow
-                ? '0 4px 16px rgba(0,0,0,0.1)'
-                : 'none',
-            overflow: 'hidden'
-          }}
-        />
+          <div
+              key={id}
+              ref={animation.ref}
+              className={animation.className}
+              style={{
+                ...baseStyle,
+                ...animation.style,
+                background: props.fill || '#5D041E',
+                borderRadius: radius,
+                opacity: props.opacity ?? 1,
+                boxShadow: isCard
+                    ? '0 12px 36px rgba(93, 4, 30, 0.28)'
+                    : props.hasBoxShadow
+                        ? '0 4px 16px rgba(0,0,0,0.1)'
+                        : 'none',
+                overflow: 'hidden'
+              }}
+          />
       );
     }
 
-    // 5. LINE BOX
     if (type === 'LineBox') {
       return (
-        <div
-          key={id}
-          ref={animation.ref}
-          className={animation.className}
-          style={{
-            ...baseStyle,
-            ...animation.style,
-            backgroundColor: props.fill || props.borderColor || '#5D041E',
-            transform: props.rotation ? `rotate(${props.rotation}deg)` : undefined,
-            opacity: props.opacity ?? 1
-          }}
-        />
+          <div
+              key={id}
+              ref={animation.ref}
+              className={animation.className}
+              style={{
+                ...baseStyle,
+                ...animation.style,
+                backgroundColor: props.fill || props.borderColor || '#5D041E',
+                transform: props.rotation ? `rotate(${props.rotation}deg)` : undefined,
+                opacity: props.opacity ?? 1
+              }}
+          />
       );
     }
 
-    // 6. PHOTO BOX
     if (type === 'PhotoBox') {
       const imgSrc = props.localImageUrl;
       const radius = props.borderRadius ? `${props.borderRadius[0]}px` : '0px';
@@ -233,46 +284,45 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       }
 
       const borderStyles = getBorderStyle(
-        props.borderPosition,
-        props.borderSize,
-        props.borderStyle,
-        props.borderColor
+          props.borderPosition,
+          props.borderSize,
+          props.borderStyle,
+          props.borderColor
       );
 
       return (
-        <div
-          key={id}
-          ref={animation.ref}
-          className={el.className ? `${el.className} ${animation.className}` : animation.className}
-          onClick={() => {
-            if (isGalleryPhoto) {
-              const idx = galleryPhotoIds.indexOf(id);
-              if (idx !== -1) setLightboxIndex(idx);
-            }
-          }}
-          style={{
-            ...baseStyle,
-            ...animation.style,
-            backgroundImage: `url("${imgSrc}")`,
-            backgroundSize: 'cover',
-            backgroundPosition: el.backgroundPosition || '50% 50%',
-            backgroundRepeat: 'no-repeat',
-            borderRadius: radius,
-            opacity: props.opacity ?? 1,
-            cursor: isGalleryPhoto ? 'pointer' : 'default',
-            boxShadow: props.hasBoxShadow
-              ? `${props.boxShadow?.offsetX || 0}px ${props.boxShadow?.offsetY || 4}px ${props.boxShadow?.blur || 12}px ${props.boxShadow?.color || 'rgba(0,0,0,0.15)'}`
-              : 'none',
-            transform: transformParts.length ? transformParts.join(' ') : undefined,
-            ...borderStyles,
-            transition: 'transform 0.25s ease, box-shadow 0.25s ease'
-          }}
-          title={isGalleryPhoto ? 'Bấm để phóng to ảnh' : undefined}
-        />
+          <div
+              key={id}
+              ref={animation.ref}
+              className={el.className ? `${el.className} ${animation.className}` : animation.className}
+              onClick={() => {
+                if (isGalleryPhoto) {
+                  const idx = galleryPhotoIds.indexOf(id);
+                  if (idx !== -1) setLightboxIndex(idx);
+                }
+              }}
+              style={{
+                ...baseStyle,
+                ...animation.style,
+                backgroundImage: imgSrc ? `url("${imgSrc}")` : 'none',
+                backgroundSize: 'cover',
+                backgroundPosition: el.backgroundPosition || '50% 50%',
+                backgroundRepeat: 'no-repeat',
+                borderRadius: radius,
+                opacity: props.opacity ?? 1,
+                cursor: isGalleryPhoto ? 'pointer' : 'default',
+                boxShadow: props.hasBoxShadow
+                    ? `${props.boxShadow?.offsetX || 0}px ${props.boxShadow?.offsetY || 4}px ${props.boxShadow?.blur || 12}px ${props.boxShadow?.color || 'rgba(0,0,0,0.15)'}`
+                    : 'none',
+                transform: transformParts.length ? transformParts.join(' ') : undefined,
+                ...borderStyles,
+                transition: 'transform 0.25s ease, box-shadow 0.25s ease'
+              }}
+              title={isGalleryPhoto ? 'Bấm để phóng to ảnh' : undefined}
+          />
       );
     }
 
-    // 7. TEXT BOX
     if (type === 'TextBox') {
       const text = props.text || '';
       const font = props.fontFamily || 'Lora, serif';
@@ -281,10 +331,10 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
       const isPulse = props.continuousAnimation?.type === 'pulse';
 
       const borderStyles = getBorderStyle(
-        props.borderPosition,
-        props.borderSize,
-        props.borderStyle,
-        props.borderColor
+          props.borderPosition,
+          props.borderSize,
+          props.borderStyle,
+          props.borderColor
       );
 
       const textStyle = {
@@ -301,8 +351,8 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
         opacity: props.opacity ?? 1,
         backgroundColor: props.backgroundColor || 'transparent',
         padding: props.padding
-          ? `${props.padding[0]}px ${props.padding[1]}px ${props.padding[2]}px ${props.padding[3]}px`
-          : '0',
+            ? `${props.padding[0]}px ${props.padding[1]}px ${props.padding[2]}px ${props.padding[3]}px`
+            : '0',
         borderRadius: props.borderRadius ? `${props.borderRadius[0]}px` : '0',
         transform: props.rotation ? `rotate(${props.rotation}deg)` : undefined,
         ...borderStyles
@@ -310,55 +360,55 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
 
       if (isLink) {
         return (
-          <a
-            key={id}
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            ref={animation.ref}
-            className={[
-              animation.className,
-              isPulse ? 'animate-pulse-glow' : ''
-            ].filter(Boolean).join(' ')}
-            style={{
-              ...baseStyle,
-              ...animation.style,
-              ...textStyle,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textDecoration: 'none',
-              cursor: 'pointer',
-              userSelect: 'none',
-              transition: 'transform 0.2s ease, box-shadow 0.2s ease'
-            }}
-          >
-            <span dangerouslySetInnerHTML={{ __html: text }} />
-          </a>
+            <a
+                key={id}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                ref={animation.ref}
+                className={[
+                  animation.className,
+                  isPulse ? 'animate-pulse-glow' : ''
+                ].filter(Boolean).join(' ')}
+                style={{
+                  ...baseStyle,
+                  ...animation.style,
+                  ...textStyle,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  userSelect: 'none',
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+                }}
+            >
+              <span dangerouslySetInnerHTML={{ __html: text }} />
+            </a>
         );
       }
 
       return (
-        <div
-          key={id}
-          ref={animation.ref}
-          className={[
-            animation.className,
-            isPulse ? 'animate-pulse-glow' : ''
-          ].filter(Boolean).join(' ')}
-          style={{
-            ...baseStyle,
-            ...animation.style,
-            ...textStyle,
-            height: 'auto',
-            display: 'block'
-          }}
-        >
           <div
-            style={{ width: '100%' }}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        </div>
+              key={id}
+              ref={animation.ref}
+              className={[
+                animation.className,
+                isPulse ? 'animate-pulse-glow' : ''
+              ].filter(Boolean).join(' ')}
+              style={{
+                ...baseStyle,
+                ...animation.style,
+                ...textStyle,
+                height: 'auto',
+                display: 'block'
+              }}
+          >
+            <div
+                style={{ width: '100%' }}
+                dangerouslySetInnerHTML={{ __html: text }}
+            />
+          </div>
       );
     }
 
@@ -371,60 +421,60 @@ export default function FullPageViewer({ viewMode = 'responsive' }) {
   const scaledHeight = canvasHeight * scale;
 
   return (
-    <div
-      ref={containerRef}
-      style={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-start'
-      }}
-    >
       <div
-        style={{
-          width: `${scaledWidth}px`,
-          height: `${scaledHeight}px`,
-          position: 'relative',
-          overflow: 'hidden',
-          backgroundColor: '#ffffff',
-          boxShadow: scale === 1 ? '0 10px 40px rgba(0,0,0,0.3)' : 'none',
-          transition: 'width 0.2s ease, height 0.2s ease'
-        }}
+          ref={containerRef}
+          style={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'flex-start'
+          }}
       >
         <div
-          id="boxwrap"
-          style={{
-            width: `${canvasWidth}px`,
-            height: `${canvasHeight}px`,
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            transformOrigin: 'top left',
-            transform: `scale(${scale})`,
-            backgroundColor: '#ffffff',
-            overflow: 'visible'
-          }}
+            style={{
+              width: `${scaledWidth}px`,
+              height: `${scaledHeight}px`,
+              position: 'relative',
+              overflow: 'hidden',
+              backgroundColor: '#ffffff',
+              boxShadow: scale === 1 ? '0 10px 40px rgba(0,0,0,0.3)' : 'none',
+              transition: 'width 0.2s ease, height 0.2s ease'
+            }}
         >
-          {pageData.elements.map(renderElement)}
+          <div
+              id="boxwrap"
+              style={{
+                width: `${canvasWidth}px`,
+                height: `${canvasHeight}px`,
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                transformOrigin: 'top left',
+                transform: `scale(${scale})`,
+                backgroundColor: '#ffffff',
+                overflow: 'visible'
+              }}
+          >
+            {pageData.elements.map(renderElement)}
+          </div>
         </div>
-      </div>
 
-      <Lightbox
-        images={galleryImages}
-        currentIndex={lightboxIndex}
-        onClose={() => setLightboxIndex(null)}
-        onPrev={() =>
-          setLightboxIndex(prev =>
-            prev > 0 ? prev - 1 : galleryImages.length - 1
-          )
-        }
-        onNext={() =>
-          setLightboxIndex(prev =>
-            prev < galleryImages.length - 1 ? prev + 1 : 0
-          )
-        }
-      />
-    </div>
+        <Lightbox
+            images={galleryImages}
+            currentIndex={lightboxIndex}
+            onClose={() => setLightboxIndex(null)}
+            onPrev={() =>
+                setLightboxIndex(prev =>
+                    prev > 0 ? prev - 1 : galleryImages.length - 1
+                )
+            }
+            onNext={() =>
+                setLightboxIndex(prev =>
+                    prev < galleryImages.length - 1 ? prev + 1 : 0
+                )
+            }
+        />
+      </div>
   );
 }

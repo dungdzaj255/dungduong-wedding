@@ -71,7 +71,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_thiep.jpg"
+        "localImageUrl": "/images/anh_thiep.webp"
       }
     },
     {
@@ -860,7 +860,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_chu_re.jpg"
+        "localImageUrl": "/images/anh_chu_re.webp"
       }
     },
     {
@@ -1083,7 +1083,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_co_dau.jpg"
+        "localImageUrl": "/images/anh_co_dau.webp"
       }
     },
     {
@@ -1512,7 +1512,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_just_married.jpg"
+        "localImageUrl": "/images/anh_just_married.webp"
       }
     },
     {
@@ -1697,7 +1697,7 @@
           "effectEnabled": true,
           "effectType": "fadeInRight",
           "effectDuration": 2,
-          "effectDelay": 1.5,
+          "effectDelay": 1.2,
           "effectEasing": "ease"
         },
         "hyperlink": "",
@@ -3425,7 +3425,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_our_love_0.jpg"
+        "localImageUrl": "/images/anh_our_love_0.webp"
       }
     },
     {
@@ -3569,7 +3569,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_our_love_1.jpg"
+        "localImageUrl": "/images/anh_our_love_1.webp"
       }
     },
     {
@@ -3634,7 +3634,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_our_love_2.jpg"
+        "localImageUrl": "/images/anh_our_love_2.webp"
       }
     },
     {
@@ -3699,7 +3699,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_our_love_3.jpg"
+        "localImageUrl": "/images/anh_our_love_3.webp"
       }
     },
     {
@@ -4365,7 +4365,7 @@
       }
     },
     {
-      "id": "XLbd5vWc6e",
+      "id": "album-1",
       "className": "album-photo",
       "type": "PhotoBox",
       "top": 4940,
@@ -4431,7 +4431,7 @@
       }
     },
     {
-      "id": "03mmnniHWa",
+      "id": "album-2",
       "className": "album-photo",
       "type": "PhotoBox",
       "top": 4940,
@@ -4496,7 +4496,7 @@
       }
     },
     {
-      "id": "Q1YmzXFFjL",
+      "id": "album-3",
       "className": "album-photo",
       "type": "PhotoBox",
       "top": 5300,
@@ -4562,7 +4562,7 @@
       }
     },
     {
-      "id": "g5IV5uiGLc",
+      "id": "album-4",
       "className": "album-photo",
       "type": "PhotoBox",
       "top": 5300,
@@ -4627,7 +4627,7 @@
       }
     },
     {
-      "id": "ypuPzT_Oc4",
+      "id": "album-5",
       "className": "album-photo",
       "type": "PhotoBox",
       "top": 5660,
@@ -4692,7 +4692,7 @@
       }
     },
     {
-      "id": "F03liH8_uX",
+      "id": "album-6",
       "className": "album-photo",
       "type": "PhotoBox",
       "top": 5660,
@@ -4984,7 +4984,7 @@
           0
         ],
         "scale": 1,
-        "localImageUrl": "/images/anh_thank_you.jpg"
+        "localImageUrl": "/images/anh_thank_you.webp"
       }
     },
     {
