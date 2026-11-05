@@ -8,60 +8,30 @@ export default function App() {
     const [isPaused, setIsPaused] = React.useState(false);
     const [imagesLoaded, setImagesLoaded] = useState(false);
 
-    // Auto‑scroll slowly and continuously to the bottom, then loop back to top
-    const hasStartedRef = useRef(false);
-
     useEffect(() => {
-        const stepPx = 2;
-        const intervalMs = 30;
-        let timer = null;
-        let timeout = null;
+        if (!imagesLoaded || isPaused) return;
 
-        const startScroll = () => {
-            if (!imagesLoaded) return;
-            if (timer) clearInterval(timer);
+        let animationId;
+        let lastTime = 0;
+        const speed = 100;
 
-            timer = setInterval(() => {
-                if (isPaused) return;
+        const scroll = (timestamp) => {
+            if (lastTime) {
+                const delta = timestamp - lastTime;
 
-                const maxScroll =
-                    document.documentElement.scrollHeight - window.innerHeight;
-
-                if (maxScroll <= 0) return;
-
-                const nextPos = window.scrollY + stepPx;
-
-                if (nextPos >= maxScroll) {
-                    window.scrollTo({
-                        top: maxScroll,
-                        behavior: 'auto'
-                    });
-
-                    clearInterval(timer);
-                    timer = null;
-                    return;
-                }
-
-                window.scrollTo({
-                    top: nextPos,
+                window.scrollBy({
+                    top: speed * delta / 1000,
                     behavior: 'auto'
                 });
-            }, intervalMs);
+            }
+
+            lastTime = timestamp;
+            animationId = requestAnimationFrame(scroll);
         };
 
-        if (!hasStartedRef.current) {
-            timeout = setTimeout(() => {
-                hasStartedRef.current = true;
-                startScroll();
-            }, 2000);
-        } else {
-            startScroll();
-        }
+        animationId = requestAnimationFrame(scroll);
 
-        return () => {
-            clearTimeout(timeout);
-            if (timer) clearInterval(timer);
-        };
+        return () => cancelAnimationFrame(animationId);
     }, [isPaused, imagesLoaded]);
 
     // Pause auto‑scroll on user interaction (scroll, touch, wheel, key)
