@@ -7,39 +7,33 @@ export default function App() {
     const rootRef = useRef(null);
     const [isPaused, setIsPaused] = React.useState(false);
     const [imagesLoaded, setImagesLoaded] = useState(false);
+    const SCROLL_SPEED = 2.5;
 
     useEffect(() => {
         if (!imagesLoaded || isPaused) return;
 
-        let animationId;
-        let lastTime = 0;
-        const speed = 100;
-
-        const scroll = (timestamp) => {
-            if (lastTime) {
-                const delta = timestamp - lastTime;
-
-                window.scrollBy({
-                    top: speed * delta / 1000,
-                    behavior: 'auto'
-                });
+        let animId;
+        const scrollStep = () => {
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10) {
+                setIsPaused(true);
+                return;
             }
 
-            lastTime = timestamp;
-            animationId = requestAnimationFrame(scroll);
+            // Accumulate fractional scroll amount
+            window.scrollBy({ top: SCROLL_SPEED, behavior: 'smooth' });
+
+            animId = requestAnimationFrame(scrollStep);
         };
 
-        animationId = requestAnimationFrame(scroll);
-
-        return () => cancelAnimationFrame(animationId);
+        animId = requestAnimationFrame(scrollStep);
+        return () => cancelAnimationFrame(animId);
     }, [isPaused, imagesLoaded]);
 
     // Pause auto‑scroll on user interaction (scroll, touch, wheel, key)
     React.useEffect(() => {
         const pause = () => setIsPaused(true);
         window.addEventListener('wheel', pause, {passive: true});
-        window.addEventListener('touchstart', pause, {passive: true});
-        window.addEventListener('touchend', pause, {passive: true});
+        window.addEventListener('touchmove', pause, {passive: true});
         return () => {
             window.removeEventListener('wheel', pause);
         };
@@ -47,10 +41,7 @@ export default function App() {
 
     // Toggle auto‑scroll when tapping on page
     const handleRootClick = (e) => {
-        if (e.target.closest('.music-button')) {
-            return;
-        }
-        if (e.target.closest('button, a, .rsvp-box, .album-photo, .light-box')) {
+        if (e.target.closest('a, .rsvp-box, .album-photo, .light-box, .scroll-top-button')) {
             setIsPaused(true);
             return;
         }
@@ -58,7 +49,7 @@ export default function App() {
     };
 
 
-    const [viewMode, setViewMode] = useState('responsive'); // 'responsive' | 'mobile' | 'full'
+    const [viewMode] = useState('responsive'); // 'responsive' | 'mobile' | 'full'
     const [copied, setCopied] = useState(false);
 
     const scrollToTop = () => {
@@ -149,6 +140,7 @@ export default function App() {
 
                 {/* Scroll To Top Button */}
                 <button
+                    className={"scroll-top-button"}
                     onClick={scrollToTop}
                     aria-label="Lên đầu trang"
                     title="Cuộn lên đầu trang"
