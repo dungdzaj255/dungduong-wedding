@@ -7,7 +7,7 @@ export default function App() {
     const rootRef = useRef(null);
     const [isPaused, setIsPaused] = React.useState(false);
     const [imagesLoaded, setImagesLoaded] = useState(false);
-    const SCROLL_SPEED = 2.5;
+    const SCROLL_SPEED = 0.5;
 
     useEffect(() => {
         if (!imagesLoaded || isPaused) return;
@@ -20,7 +20,7 @@ export default function App() {
             }
 
             // Accumulate fractional scroll amount
-            window.scrollBy({ top: SCROLL_SPEED, behavior: 'smooth' });
+            window.scrollBy({ top: SCROLL_SPEED, behavior: 'auto' });
 
             animId = requestAnimationFrame(scrollStep);
         };
