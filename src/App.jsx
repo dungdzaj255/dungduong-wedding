@@ -7,26 +7,31 @@ export default function App() {
     const rootRef = useRef(null);
     const [isPaused, setIsPaused] = React.useState(false);
     const [imagesLoaded, setImagesLoaded] = useState(false);
-    const SCROLL_SPEED = 0.5;
+    const speed = 80;
 
     useEffect(() => {
         if (!imagesLoaded || isPaused) return;
 
-        let animId;
-        const scrollStep = () => {
-            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10) {
-                setIsPaused(true);
-                return;
+        let animationId;
+        let lastTime = 0;
+
+        const scroll = (timestamp) => {
+            if (lastTime !== 0) {
+                const delta = Math.min(timestamp - lastTime, 50);
+
+                window.scrollBy({
+                    top: speed * delta / 1000,
+                    behavior: 'auto'
+                });
             }
 
-            // Accumulate fractional scroll amount
-            window.scrollBy({ top: SCROLL_SPEED, behavior: 'auto' });
-
-            animId = requestAnimationFrame(scrollStep);
+            lastTime = timestamp;
+            animationId = requestAnimationFrame(scroll);
         };
 
-        animId = requestAnimationFrame(scrollStep);
-        return () => cancelAnimationFrame(animId);
+        animationId = requestAnimationFrame(scroll);
+
+        return () => cancelAnimationFrame(animationId);
     }, [isPaused, imagesLoaded]);
 
     // Pause auto‑scroll on user interaction (scroll, touch, wheel, key)
@@ -87,7 +92,7 @@ export default function App() {
         }}
         >
             {/* Background Audio Player */}
-            <MusicPlayer src="/music.mp3" title="Beautiful Girl"/>
+            <MusicPlayer src="/music.mp3" title="Aloha"/>
 
             {/* Main Full Page Viewer */}
             <main
