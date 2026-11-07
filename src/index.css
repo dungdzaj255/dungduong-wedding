@@ -325,3 +325,55 @@ body {
     transform: perspective(800px) rotateY(0deg);
   }
 }
+
+/* =========================================================
+   ENVELOPE COVER ANIMATIONS
+   ========================================================= */
+@keyframes envelope-seal-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes envelope-sparkle-star {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.35) rotate(140deg);
+    opacity: 0;
+  }
+}
+
+@keyframes envelope-petal-fall {
+  0% {
+    transform: translateY(-20px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) translateX(var(--sway, 15px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes envelope-shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}

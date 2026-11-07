@@ -1,16 +1,18 @@
 import React, {useState, useEffect, useRef} from 'react';
 import FullPageViewer from './components/FullPageViewer';
 import MusicPlayer from './components/MusicPlayer';
+import EnvelopeCover from './components/EnvelopeCover';
 import {Smartphone, Monitor, Maximize2, Send, ChevronUp, Share2, Heart} from 'lucide-react';
 
 export default function App() {
     const rootRef = useRef(null);
-    const [isPaused, setIsPaused] = React.useState(false);
+    const [isPaused, setIsPaused] = React.useState(true);
+    const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
     const [imagesLoaded, setImagesLoaded] = useState(false);
     const speed = 80;
 
     useEffect(() => {
-        if (!imagesLoaded || isPaused) return;
+        if (!imagesLoaded || isPaused || !isEnvelopeOpen) return;
 
         let animationId;
         let lastTime = 0;
@@ -32,7 +34,7 @@ export default function App() {
         animationId = requestAnimationFrame(scroll);
 
         return () => cancelAnimationFrame(animationId);
-    }, [isPaused, imagesLoaded]);
+    }, [isPaused, imagesLoaded, isEnvelopeOpen]);
 
     // Pause auto‑scroll on user interaction (scroll, touch, wheel, key)
     React.useEffect(() => {
@@ -91,6 +93,15 @@ export default function App() {
             position: 'relative'
         }}
         >
+            {/* Màn mở phong bì cưới tương tác */}
+            <EnvelopeCover
+                isOpen={isEnvelopeOpen}
+                onOpen={() => {
+                    setIsEnvelopeOpen(true);
+                    setIsPaused(false);
+                }}
+            />
+
             {/* Background Audio Player */}
             <MusicPlayer src="/music.mp3" title="Aloha"/>
 
