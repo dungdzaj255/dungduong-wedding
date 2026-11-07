@@ -102,8 +102,8 @@ export default function App() {
                 }}
             />
 
-            {/* Background Audio Player */}
-            <MusicPlayer src="/music.mp3" title="Aloha"/>
+            {/* Background Audio Player - phát khi mở thiệp */}
+            <MusicPlayer src="/music.mp3" title="Aloha" autoPlayTrigger={isEnvelopeOpen}/>
 
             {/* Main Full Page Viewer */}
             <main

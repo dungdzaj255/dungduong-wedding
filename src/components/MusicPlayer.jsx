@@ -1,31 +1,20 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Music4, PauseIcon, Play} from 'lucide-react';
 
-export default function MusicPlayer({ src = '/music.mp3', title = 'Aloha' }) {
+export default function MusicPlayer({ src = '/music.mp3', title = 'Aloha', autoPlayTrigger = false }) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
   const audioRef = useRef(null);
 
+  // Khi người dùng bấm mở thiệp (autoPlayTrigger = true) thì bắt đầu phát nhạc
   useEffect(() => {
-    const handleFirstInteraction = () => {
-      if (!hasInteracted && audioRef.current) {
-        setHasInteracted(true);
-        audioRef.current.play().then(() => {
-          setIsPlaying(true);
-        }).catch(() => {
-          // Browser prevented autoplay
-        });
-      }
-    };
-
-    window.addEventListener('click', handleFirstInteraction, { once: true });
-    window.addEventListener('touchstart', handleFirstInteraction, { once: true });
-
-    return () => {
-      window.removeEventListener('click', handleFirstInteraction);
-      window.removeEventListener('touchstart', handleFirstInteraction);
-    };
-  }, [hasInteracted]);
+    if (autoPlayTrigger && audioRef.current && !isPlaying) {
+      audioRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch((err) => {
+        console.log('Audio autoplay prevented by browser:', err);
+      });
+    }
+  }, [autoPlayTrigger]);
 
   const togglePlay = (e) => {
     e.stopPropagation();
